@@ -88,6 +88,17 @@
         <figure id="Location3"></figure>        
     </section>
 
+    <section>
+        <div class="chart-description">
+            <h2>Section 4: Comparison of Unemployment rate in Japan and the UK</h2>
+            <p> This section contains a graph for unemployment in Japan and UK. 
+                
+            </p>
+        </div>
+        <figure id="Location4"></figure> 
+        <figure id="Location5"></figure>        
+    </section>
+
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
@@ -108,6 +119,12 @@
 
         let figure_3_spec ="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/football/chartFootball4.json"
         vegaEmbed('#Location3', figure_3_spec)
+
+        let figure_4_spec = "jpnunemployment.json"
+        vegaEmbed('#Location4', figure_4_spec)
+
+        let figure_5_spec = "ukunemployment.json"
+        vegaEmbed('#Location5', figure_5_spec)
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
         // e.g. 
