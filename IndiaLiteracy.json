@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/literacyrate_India.csv"
+  },
+  "title": {"text": "India Literacy Rate "},
+  "width": 300,
+  "height": 300,
+  "mark": {"type": "line", "color": "red"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "axis": {"grid": false},
+      "title": "",
+      "type": "temporal"
+    },
+    "y": {"field": "value", "title": null, "type": "quantitative"}
+  },
+  "config": {}
+}

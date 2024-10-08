@@ -78,25 +78,29 @@
         <figure id="Location2"></figure>        
     </section>
 
+    
     <section>
         <div class="chart-description">
-            <h2>Section 3: Another chart</h2>
-            <p> This section contains a graph for economic development vs women's football performance. 
-                
-            </p>
-        </div>
-        <figure id="Location3"></figure>        
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 4: Comparison of Unemployment rate in Japan and the UK</h2>
+            <h2>Section 3: Comparison of Unemployment rate in Japan and the UK</h2>
             <p> This section contains a graph for unemployment in Japan and UK. 
                 
             </p>
         </div>
-        <figure id="Location4"></figure> 
-        <figure id="Location5"></figure>        
+        <figure id="Location3"></figure> 
+        <figure id="Location4"></figure>        
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 5: Legacy of Empire</h2>
+            <p> The British Empire was spreading across the world and influenced many countries. In particular, educational gap is still large in India.
+            </p>
+        </div>
+        <figure id="Location5"></figure>
+        <figure id="Location6"></figure> 
+        <div class="chart-description">
+            <p> Literacy rate in India is increasing, but still some children cannot get access to education. The British Empire caused these gap in India.
+
     </section>
 
     <!-- Do you want to add more sections? -->
@@ -117,14 +121,17 @@
         let figure_2_spec ="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/ONSgdp/chartGDP11.json"
         vegaEmbed('#Location2', figure_2_spec)
 
-        let figure_3_spec ="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/football/chartFootball4.json"
+        let figure_3_spec ="jpnunemployment.json"
         vegaEmbed('#Location3', figure_3_spec)
 
-        let figure_4_spec = "jpnunemployment.json"
+        let figure_4_spec = "ukunemployment.json"
         vegaEmbed('#Location4', figure_4_spec)
 
-        let figure_5_spec = "ukunemployment.json"
+        let figure_5_spec = "britishempire.json"
         vegaEmbed('#Location5', figure_5_spec)
+
+        let figure_6_spec = "IndiaLiteracy.json"
+        vegaEmbed('#Location6', figure_6_spec)
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
         // e.g. 
