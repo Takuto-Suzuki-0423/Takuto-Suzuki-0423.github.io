@@ -65,23 +65,16 @@
             </p>
         </div>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: Another chart</h2>
-            <p> This section contains a graph of GDP.
-                
-            </p>
-        </div>
+            <p>
+                This is a graph of GDP.
+            </p>    
         <figure id="Location2"></figure>        
     </section>
 
     
     <section>
         <div class="chart-description">
-            <h2>Section 3: Comparison of Unemployment rate in Japan and the UK</h2>
+            <h2>Section 2: Comparison of Unemployment rate in Japan and the UK</h2>
             <p> This section contains a graph for unemployment in Japan and UK. 
                 
             </p>
@@ -92,7 +85,7 @@
 
     <section>
         <div class="chart-description">
-            <h2>Section 5: Legacy of Empire</h2>
+            <h2>Section 3: Legacy of Empire</h2>
             <p> The British Empire was spreading across the world and influenced many countries. In particular, educational gap is still large in India.
             </p>
         </div>
@@ -100,8 +93,32 @@
         <figure id="Location6"></figure> 
         <div class="chart-description">
             <p> Literacy rate in India is increasing, but still some children cannot get access to education. The British Empire caused these gap in India.
-
+            </p>    
     </section>
+    
+    <section>
+        <div class="chart-description">
+            <h2>Section 4: Replication</h2>
+            <p>  I replicate the graph of Japanese Yen to U.S. Dollar Spot Exchange Rate
+            </p>
+        </div>
+        <img src="fredgraph_exchangerate.png"/>
+        <figure id="Location7"></figure>
+        <div class="chart-description">
+            <P> Above is the replicated chart.
+            </P>
+        </div>
+        <figure id="Location8"></figure> 
+        <div class="chart-description">
+            <p> I changed the scale of y axis, and placed a tick for every 50.
+            </p>
+        </div>     
+
+            
+    </section>
+    
+        
+         
 
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
@@ -132,6 +149,13 @@
 
         let figure_6_spec = "IndiaLiteracy.json"
         vegaEmbed('#Location6', figure_6_spec)
+
+        let figure_7_spec = "jpnUSexchangerate.json"
+        vegaEmbed('#Location7', figure_7_spec)
+
+        let figure_8_spec = "RevisedExchangerate.json"
+        vegaEmbed('#Location8', figure_8_spec)
+
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
         // e.g. 

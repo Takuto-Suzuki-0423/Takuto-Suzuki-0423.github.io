@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Japanse",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/EXJPUS.csv",
+    "format": {"type": "csv"}
+  },
+  "title": {"text": " Japanese Yen to U.S. Dollar Spot Exchange Rate"},
+  "width": 760,
+  "height": 300,
+  "layer": [
+    {
+      "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
+      "encoding": {
+        "x": {"datum": {"year": 1973, "month": 11}},
+        "x2": {"datum": {"year": 1975, "month": 3}}
+      }
+    },
+    {
+      "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
+      "encoding": {
+        "x": {"datum": {"year": 1980, "month": 1}},
+        "x2": {"datum": {"year": 1980, "month": 7}}
+      }
+    },
+    {
+      "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
+      "encoding": {
+        "x": {"datum": {"year": 1981, "month": 7}},
+        "x2": {"datum": {"year": 1982, "month": 11}}
+      }
+    },
+    {
+      "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
+      "encoding": {
+        "x": {"datum": {"year": 1990, "month": 7}},
+        "x2": {"datum": {"year": 1991, "month": 3}}
+      }
+    },
+    {
+      "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
+      "encoding": {
+        "x": {"datum": {"year": 2001, "month": 3}},
+        "x2": {"datum": {"year": 2001, "month": 11}}
+      }
+    },
+    {
+      "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
+      "encoding": {
+        "x": {"datum": {"year": 2007, "month": 12}},
+        "x2": {"datum": {"year": 2009, "month": 6}}
+      }
+    },
+    {
+      "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
+      "encoding": {
+        "x": {"datum": {"year": 2020, "month": 2}},
+        "x2": {"datum": {"year": 2020, "month": 4}}
+      }
+    },
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "DATE",
+          "type": "temporal",
+          "axis": {"grid": false, "tickCount": {"interval": "year", "step": 5}},
+          "title": "Source: Board of Governors of the Federal Reserve System (US)"
+        },
+        "y": {
+          "field": "EXJPUS",
+          "title": "Japanese Yen to One U.S. Dollar",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {}
+}
