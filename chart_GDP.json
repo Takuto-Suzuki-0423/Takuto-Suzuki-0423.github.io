@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://api.beta.ons.gov.uk/v1/data?uri=/economy/grossdomesticproductgdp/timeseries/abmi/ukea",
+        "format": {
+            "property": "years"
+        }
+    },
+    "title": "GDP",
+    "width": 200,
+    "height": 200,
+    "mark": "line",
+    "encoding": {
+        "x": {
+            "field": "date",
+            "type": "temporal"
+        },
+        "y": {
+            "field": "value",
+            "type": "quantitative"
+        }
+    },
+    "config": {}
+}
