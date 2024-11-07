@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/japan_.geojson",
+    "format": {"property": "features"}
+  },
+  "title": {
+    "text": "Japanese population 2022",
+    "subtitle": ["Source: Statistics Bureau of Japan"]
+  },
+  "projection": {"type": "mercator"},
+  "transform": [
+    {
+      "lookup": "properties.name_english",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/new_japanese_population.csv"
+        },
+        "key": "Prefecture",
+        "fields": ["Prefecture", "Population"]
+      }
+    }
+  ],
+  "layer": [
+    {"mark": {"type": "geoshape", "stroke": "gray", "fill": "lightgrey"}},
+    {
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {
+          "title": "Population (million)",
+          "field": "Population",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "Prefecture", "title": "Prefecture"},
+          {"field": "Population", "title": "Population"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
