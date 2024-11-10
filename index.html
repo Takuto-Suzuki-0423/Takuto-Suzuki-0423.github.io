@@ -98,7 +98,7 @@
     
     <section>
         <div class="chart-description">
-            <h2>Section 4: Replication</h2>
+            <h2> Section 4: Replication</h2>
             <p>  I replicate the graph of Japanese Yen to U.S. Dollar Spot Exchange Rate
             </p>
         </div>
@@ -116,6 +116,15 @@
 
             
     </section>
+
+    <section>
+        <div class="chart-description">
+            <h2> Section 5: Scraping </h2>
+            <p>Since my project will be about education and its outcome, I chose this site which is about employment levels by course of study
+                . The source code is <a href="https://colab.research.google.com/drive/1uFIdg0AWxGK5PXa_QLL9RmLM1vlk_W0T?usp=sharing">here</a>.</p>
+
+        </div>
+        <figure id = Location20></figure>
 
     <section>
         <div class = "chart-description">
@@ -213,6 +222,9 @@
 
         let figure_19_spec = "JapanPopulation.json"
         vegaEmbed('#Location19', figure_19_spec)
+
+        let figure_20_spec = "course_employment.json"
+        vegaEmbed('#Location20', figure_20_spec)
 
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
