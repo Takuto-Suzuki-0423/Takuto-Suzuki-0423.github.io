@@ -3,7 +3,7 @@
   "width": 400,
   "height": {"step": 15},
   "data": {
-    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/university_employment.csv"
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task5/university_employment.csv"
   },
   "transform": [{"filter": "datum.University !== 'All subjects'"}],
   "encoding": {"y": {"field": "University", "type": "nominal", "axis": null}},
