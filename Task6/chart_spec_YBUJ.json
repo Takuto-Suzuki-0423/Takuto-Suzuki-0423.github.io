@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task6/data_FRED-YBUJ.json",
+        "format": {
+            "property": "years"
+        }
+    },
+    "title": {
+        "text": "Employment rate",
+        "subtitle": "All: Aged 35-49"
+    },
+    "width": 200,
+    "height": 200,
+    "mark": {
+        "type": "line",
+        "color": "red"
+    },
+    "encoding": {
+        "x": {
+            "field": "date",
+            "type": "temporal"
+        },
+        "y": {
+            "field": "value",
+            "type": "quantitative"
+        }
+    }
+}
