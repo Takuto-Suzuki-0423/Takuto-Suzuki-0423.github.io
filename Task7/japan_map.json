@@ -3,7 +3,7 @@
   "width": 600,
   "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/japan_.geojson",
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task7/japan_.geojson",
     "format": {"property": "features"}
   },
   "mark": {"type": "geoshape"},
