@@ -7,11 +7,15 @@
         }
     },
     "title": {
-        "text": "Employment rate",
-        "subtitle": "Male: Aged 18-24"
-    },
-    "width": 200,
-    "height": 200,
+      "text": "Employment rate",
+      "subtitle":["%, Male: Aged 18-24; Source: ONS",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitleColor":"black",
+      "anchor": "start",
+      "color": "black"},
+    "width": "container",
+    "height": "container",
     "mark": {
         "type": "line",
         "color": "red"
