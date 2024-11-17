@@ -3,9 +3,16 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task3/literacyrate_India.csv"
   },
-  "title": {"text": "India Literacy Rate "},
-  "width": 200,
-  "height": 200,
+  "title": {
+      "text": "India literacy rate",
+      "subtitle":["%, Among overall population; Source: Statista",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitleColor":"black",
+      "anchor": "start",
+      "color": "black"},
+  "width": "container",
+  "height": "container",
   "mark": {"type": "line", "color": "red"},
   "encoding": {
     "x": {

@@ -3,9 +3,16 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task3/statistic_id1070352_present-day-countries-in-the-british-empire-1600-2000.csv"
   },
-  "title": {"text": "Number of countries in the British Empire"},
-  "width": 200,
-  "height": 200,
+ "title": {
+      "text": "Number of countries in British Empire",
+      "subtitle":["From 1600 to 2000; Source: Statista",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitleColor":"black",
+      "anchor": "start",
+      "color": "black"},
+  "width": "container",
+  "height": "container",
   "mark": {"type": "line", "color": "red"},
   "encoding": {
     "x": {
