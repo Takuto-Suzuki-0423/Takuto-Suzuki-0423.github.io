@@ -1,11 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 300,
+  "width": "container",
+  "height": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task7/japan_.geojson",
     "format": {"property": "features"}
   },
+  "title": {
+      "text": "Japan map",
+      "subtitle":[" Devided by each prefecture",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitleColor":"black",
+      "anchor": "start",
+      "color": "black"},
   "mark": {"type": "geoshape"},
   "projection": {"type": "mercator"},
   "encoding": {

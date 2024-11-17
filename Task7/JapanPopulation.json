@@ -1,15 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 300,
+  "width": "container",
+  "height": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task7/japan_.geojson",
     "format": {"property": "features"}
   },
   "title": {
-    "text": "Japanese population 2022",
-    "subtitle": ["Source: Statistics Bureau of Japan"]
-  },
+      "text": "Japanese population in 2022",
+      "subtitle":["million; Source: Statistics Bureau of Japan; Ministry of Internal Affairs and Communications",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitleColor":"black",
+      "anchor": "start",
+      "color": "black"},
   "projection": {"type": "mercator"},
   "transform": [
     {
