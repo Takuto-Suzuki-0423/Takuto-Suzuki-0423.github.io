@@ -5,9 +5,16 @@
     "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/EXJPUS.csv",
     "format": {"type": "csv"}
   },
-  "title": {"text": " Japanese Yen to U.S. Dollar Spot Exchange Rate"},
-  "width": 760,
-  "height": 300,
+  "title": {
+      "text": "Japan Yen to U.S. Dollar Spot Exchange Rate",
+      "subtitle":["Shaded area indicates US recession; Source: FRED",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "subtitleColor":"black",
+      "anchor": "start",
+      "color": "black"},
+  "width": "container",
+  "height": "container",
   "layer": [
     {
       "mark": {"type": "rect", "color": "rgb(230,230,230)", "opacity": 0.7},
