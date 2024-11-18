@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Project/offer_preference.csv"
+  },
+  "hconcat": [
+    {
+      "title": {
+        "text": "Offers for first, preference",
+        "subtitle": ["%, Secondary school in England", "Source: GOV.UK"],
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "subtitleColor": "black",
+        "anchor": "start",
+        "color": "black"
+      },
+      "width": 120,
+      "height": 120,
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "time_period",
+          "type": "temporal",
+          "title": null,
+          "timeUnit": "binnedutcyear"
+        },
+        "y": {
+          "field": "first_preference_offers_percent",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [70, 90]}
+        },
+        "color": {"field": "admissions_group", "type": "nominal"}
+      }
+    },
+    {
+      "title": {
+        "text": "Offers for second preference",
+        "subtitle": ["%, Secondary school in England", "Source: GOV.UK"],
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "subtitleColor": "black",
+        "anchor": "start",
+        "color": "black"
+      },
+      "width": 120,
+      "height": 120,
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "time_period",
+          "type": "temporal",
+          "title": null,
+          "timeUnit": "binnedutcyear"
+        },
+        "y": {
+          "field": "second_preference_offers_percent",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [5, 15]}
+        },
+        "color": {"field": "admissions_group", "type": "nominal"}
+      }
+    },
+    {
+      "title": {
+        "text": "Offers for third preference",
+        "subtitle": ["%, Secondary school in England", "Source: GOV.UK"],
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "subtitleColor": "black",
+        "anchor": "start",
+        "color": "black"
+      },
+      "width": 120,
+      "height": 120,
+      "mark": "point",
+      "encoding": {
+        "x": {
+          "field": "time_period",
+          "type": "temporal",
+          "title": null,
+          "timeUnit": "binnedutcyear"
+        },
+        "y": {
+          "field": "third_preference_offers_percent",
+          "type": "quantitative",
+          "title": null
+        },
+        "color": {"field": "admissions_group", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {}
+}
