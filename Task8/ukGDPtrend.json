@@ -1,0 +1,1173 @@
+{
+  "height": "container",
+  "width": "container",
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "blue"
+      },
+      "encoding": {
+        "x": {
+          "field": "DATE",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "real_GDP",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "red"
+      },
+      "encoding": {
+        "x": {
+          "field": "DATE",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "calculated_trend",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "green"
+      },
+      "encoding": {
+        "x": {
+          "field": "DATE",
+          "type": "temporal",
+          "title": null
+        },
+        "y": {
+          "field": "detrended_real_GDP",
+          "type": "quantitative",
+          "title": null
+        }
+      }
+    }
+  ],
+  "data": {
+    "name": "data-4a69062963dae832d18793d5fb84f044"
+  },
+  "title": {"fontSize":10,
+  "subtitleFontSize":8,
+    "text": "Real GDP, Time Trend, and Detrended Real GDP",
+    "subtitle":"Millions of Chained 2010 British Pounds, Source: FRED"
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+  "datasets": {
+    "data-4a69062963dae832d18793d5fb84f044": [
+      {
+        "DATE": "1975-01-01T00:00:00",
+        "real_GDP": 180405,
+        "detrended_real_GDP": 19277.47387146589,
+        "calculated_trend": 161127.5261285341
+      },
+      {
+        "DATE": "1975-04-01T00:00:00",
+        "real_GDP": 177442.3,
+        "detrended_real_GDP": 14584.601456977281,
+        "calculated_trend": 162857.6985430227
+      },
+      {
+        "DATE": "1975-07-01T00:00:00",
+        "real_GDP": 176835.5,
+        "detrended_real_GDP": 12247.629042488727,
+        "calculated_trend": 164587.87095751127
+      },
+      {
+        "DATE": "1975-10-01T00:00:00",
+        "real_GDP": 178863.1,
+        "detrended_real_GDP": 12545.056628000166,
+        "calculated_trend": 166318.04337199984
+      },
+      {
+        "DATE": "1976-01-01T00:00:00",
+        "real_GDP": 181693.7,
+        "detrended_real_GDP": 13645.484213511576,
+        "calculated_trend": 168048.21578648844
+      },
+      {
+        "DATE": "1976-04-01T00:00:00",
+        "real_GDP": 181393.5,
+        "detrended_real_GDP": 11615.111799022998,
+        "calculated_trend": 169778.388200977
+      },
+      {
+        "DATE": "1976-07-01T00:00:00",
+        "real_GDP": 183664.4,
+        "detrended_real_GDP": 12155.839384534425,
+        "calculated_trend": 171508.56061546557
+      },
+      {
+        "DATE": "1976-10-01T00:00:00",
+        "real_GDP": 187560.4,
+        "detrended_real_GDP": 14321.66697004583,
+        "calculated_trend": 173238.73302995416
+      },
+      {
+        "DATE": "1977-01-01T00:00:00",
+        "real_GDP": 187613.7,
+        "detrended_real_GDP": 12644.79455555728,
+        "calculated_trend": 174968.90544444273
+      },
+      {
+        "DATE": "1977-04-01T00:00:00",
+        "real_GDP": 186310.5,
+        "detrended_real_GDP": 9611.422141068673,
+        "calculated_trend": 176699.07785893133
+      },
+      {
+        "DATE": "1977-07-01T00:00:00",
+        "real_GDP": 187608.3,
+        "detrended_real_GDP": 9179.049726580095,
+        "calculated_trend": 178429.2502734199
+      },
+      {
+        "DATE": "1977-10-01T00:00:00",
+        "real_GDP": 190827,
+        "detrended_real_GDP": 10667.57731209154,
+        "calculated_trend": 180159.42268790846
+      },
+      {
+        "DATE": "1978-01-01T00:00:00",
+        "real_GDP": 192529,
+        "detrended_real_GDP": 10639.404897602944,
+        "calculated_trend": 181889.59510239706
+      },
+      {
+        "DATE": "1978-04-01T00:00:00",
+        "real_GDP": 194771.8,
+        "detrended_real_GDP": 11152.032483114366,
+        "calculated_trend": 183619.76751688562
+      },
+      {
+        "DATE": "1978-07-01T00:00:00",
+        "real_GDP": 197449.6,
+        "detrended_real_GDP": 12099.660068625817,
+        "calculated_trend": 185349.9399313742
+      },
+      {
+        "DATE": "1978-10-01T00:00:00",
+        "real_GDP": 199240.3,
+        "detrended_real_GDP": 12160.187654137204,
+        "calculated_trend": 187080.11234586278
+      },
+      {
+        "DATE": "1979-01-01T00:00:00",
+        "real_GDP": 198533.1,
+        "detrended_real_GDP": 9722.815239648655,
+        "calculated_trend": 188810.28476035135
+      },
+      {
+        "DATE": "1979-04-01T00:00:00",
+        "real_GDP": 207302.7,
+        "detrended_real_GDP": 16762.242825160094,
+        "calculated_trend": 190540.45717483992
+      },
+      {
+        "DATE": "1979-07-01T00:00:00",
+        "real_GDP": 202701.3,
+        "detrended_real_GDP": 10430.670410671475,
+        "calculated_trend": 192270.6295893285
+      },
+      {
+        "DATE": "1979-10-01T00:00:00",
+        "real_GDP": 204845.6,
+        "detrended_real_GDP": 10844.797996182926,
+        "calculated_trend": 194000.80200381708
+      },
+      {
+        "DATE": "1980-01-01T00:00:00",
+        "real_GDP": 202901.2,
+        "detrended_real_GDP": 7170.225581694336,
+        "calculated_trend": 195730.97441830568
+      },
+      {
+        "DATE": "1980-04-01T00:00:00",
+        "real_GDP": 198842.4,
+        "detrended_real_GDP": 1381.253167205752,
+        "calculated_trend": 197461.14683279424
+      },
+      {
+        "DATE": "1980-07-01T00:00:00",
+        "real_GDP": 198646.1,
+        "detrended_real_GDP": -545.2192472828028,
+        "calculated_trend": 199191.3192472828
+      },
+      {
+        "DATE": "1980-10-01T00:00:00",
+        "real_GDP": 196470.2,
+        "detrended_real_GDP": -4451.291661771364,
+        "calculated_trend": 200921.49166177138
+      },
+      {
+        "DATE": "1981-01-01T00:00:00",
+        "real_GDP": 196223.3,
+        "detrended_real_GDP": -6428.3640762599825,
+        "calculated_trend": 202651.66407625997
+      },
+      {
+        "DATE": "1981-04-01T00:00:00",
+        "real_GDP": 196624.9,
+        "detrended_real_GDP": -7756.936490748543,
+        "calculated_trend": 204381.83649074854
+      },
+      {
+        "DATE": "1981-07-01T00:00:00",
+        "real_GDP": 198742.9,
+        "detrended_real_GDP": -7369.108905237139,
+        "calculated_trend": 206112.00890523713
+      },
+      {
+        "DATE": "1981-10-01T00:00:00",
+        "real_GDP": 198991.6,
+        "detrended_real_GDP": -8850.581319725694,
+        "calculated_trend": 207842.1813197257
+      },
+      {
+        "DATE": "1982-01-01T00:00:00",
+        "real_GDP": 199378.6,
+        "detrended_real_GDP": -10193.75373421426,
+        "calculated_trend": 209572.35373421427
+      },
+      {
+        "DATE": "1982-04-01T00:00:00",
+        "real_GDP": 201503.9,
+        "detrended_real_GDP": -9798.626148702839,
+        "calculated_trend": 211302.52614870283
+      },
+      {
+        "DATE": "1982-07-01T00:00:00",
+        "real_GDP": 202025.7,
+        "detrended_real_GDP": -11006.998563191417,
+        "calculated_trend": 213032.69856319143
+      },
+      {
+        "DATE": "1982-10-01T00:00:00",
+        "real_GDP": 203445.6,
+        "detrended_real_GDP": -11317.27097767999,
+        "calculated_trend": 214762.87097768
+      },
+      {
+        "DATE": "1983-01-01T00:00:00",
+        "real_GDP": 207170.7,
+        "detrended_real_GDP": -9322.34339216858,
+        "calculated_trend": 216493.0433921686
+      },
+      {
+        "DATE": "1983-04-01T00:00:00",
+        "real_GDP": 208942.3,
+        "detrended_real_GDP": -9280.915806657169,
+        "calculated_trend": 218223.21580665716
+      },
+      {
+        "DATE": "1983-07-01T00:00:00",
+        "real_GDP": 211229.5,
+        "detrended_real_GDP": -8723.888221145724,
+        "calculated_trend": 219953.38822114572
+      },
+      {
+        "DATE": "1983-10-01T00:00:00",
+        "real_GDP": 213054.5,
+        "detrended_real_GDP": -8629.06063563432,
+        "calculated_trend": 221683.56063563432
+      },
+      {
+        "DATE": "1984-01-01T00:00:00",
+        "real_GDP": 214529.5,
+        "detrended_real_GDP": -8884.233050122886,
+        "calculated_trend": 223413.7330501229
+      },
+      {
+        "DATE": "1984-04-01T00:00:00",
+        "real_GDP": 212651.1,
+        "detrended_real_GDP": -12492.805464611476,
+        "calculated_trend": 225143.90546461148
+      },
+      {
+        "DATE": "1984-07-01T00:00:00",
+        "real_GDP": 214026.7,
+        "detrended_real_GDP": -12847.377879100037,
+        "calculated_trend": 226874.07787910005
+      },
+      {
+        "DATE": "1984-10-01T00:00:00",
+        "real_GDP": 218259.1,
+        "detrended_real_GDP": -10345.15029358861,
+        "calculated_trend": 228604.25029358862
+      },
+      {
+        "DATE": "1985-01-01T00:00:00",
+        "real_GDP": 220048.9,
+        "detrended_real_GDP": -10285.522708077187,
+        "calculated_trend": 230334.42270807718
+      },
+      {
+        "DATE": "1985-04-01T00:00:00",
+        "real_GDP": 224709.1,
+        "detrended_real_GDP": -7355.495122565771,
+        "calculated_trend": 232064.59512256578
+      },
+      {
+        "DATE": "1985-07-01T00:00:00",
+        "real_GDP": 224905.3,
+        "detrended_real_GDP": -8889.467537054355,
+        "calculated_trend": 233794.76753705434
+      },
+      {
+        "DATE": "1985-10-01T00:00:00",
+        "real_GDP": 225448.8,
+        "detrended_real_GDP": -10076.139951542951,
+        "calculated_trend": 235524.93995154294
+      },
+      {
+        "DATE": "1986-01-01T00:00:00",
+        "real_GDP": 228005.5,
+        "detrended_real_GDP": -9249.612366031506,
+        "calculated_trend": 237255.1123660315
+      },
+      {
+        "DATE": "1986-04-01T00:00:00",
+        "real_GDP": 229697.6,
+        "detrended_real_GDP": -9287.684780520067,
+        "calculated_trend": 238985.28478052007
+      },
+      {
+        "DATE": "1986-07-01T00:00:00",
+        "real_GDP": 230743,
+        "detrended_real_GDP": -9972.45719500864,
+        "calculated_trend": 240715.45719500864
+      },
+      {
+        "DATE": "1986-10-01T00:00:00",
+        "real_GDP": 234865.1,
+        "detrended_real_GDP": -7580.529609497229,
+        "calculated_trend": 242445.62960949723
+      },
+      {
+        "DATE": "1987-01-01T00:00:00",
+        "real_GDP": 237048.3,
+        "detrended_real_GDP": -7127.502023985813,
+        "calculated_trend": 244175.8020239858
+      },
+      {
+        "DATE": "1987-04-01T00:00:00",
+        "real_GDP": 240525.6,
+        "detrended_real_GDP": -5380.374438474391,
+        "calculated_trend": 245905.9744384744
+      },
+      {
+        "DATE": "1987-07-01T00:00:00",
+        "real_GDP": 246369.6,
+        "detrended_real_GDP": -1266.546852962958,
+        "calculated_trend": 247636.14685296296
+      },
+      {
+        "DATE": "1987-10-01T00:00:00",
+        "real_GDP": 249159.6,
+        "detrended_real_GDP": -206.7192674515245,
+        "calculated_trend": 249366.31926745153
+      },
+      {
+        "DATE": "1988-01-01T00:00:00",
+        "real_GDP": 253600,
+        "detrended_real_GDP": 2503.508318059903,
+        "calculated_trend": 251096.4916819401
+      },
+      {
+        "DATE": "1988-04-01T00:00:00",
+        "real_GDP": 255094.9,
+        "detrended_real_GDP": 2268.2359035713016,
+        "calculated_trend": 252826.6640964287
+      },
+      {
+        "DATE": "1988-07-01T00:00:00",
+        "real_GDP": 258980.1,
+        "detrended_real_GDP": 4423.263489082718,
+        "calculated_trend": 254556.8365109173
+      },
+      {
+        "DATE": "1988-10-01T00:00:00",
+        "real_GDP": 261210.3,
+        "detrended_real_GDP": 4923.2910745941335,
+        "calculated_trend": 256287.00892540585
+      },
+      {
+        "DATE": "1989-01-01T00:00:00",
+        "real_GDP": 262361.5,
+        "detrended_real_GDP": 4344.318660105579,
+        "calculated_trend": 258017.18133989442
+      },
+      {
+        "DATE": "1989-04-01T00:00:00",
+        "real_GDP": 264088.9,
+        "detrended_real_GDP": 4341.546245617035,
+        "calculated_trend": 259747.353754383
+      },
+      {
+        "DATE": "1989-07-01T00:00:00",
+        "real_GDP": 264352,
+        "detrended_real_GDP": 2874.4738311284455,
+        "calculated_trend": 261477.52616887155
+      },
+      {
+        "DATE": "1989-10-01T00:00:00",
+        "real_GDP": 264603.4,
+        "detrended_real_GDP": 1395.701416639844,
+        "calculated_trend": 263207.6985833602
+      },
+      {
+        "DATE": "1990-01-01T00:00:00",
+        "real_GDP": 266386.8,
+        "detrended_real_GDP": 1448.9290021512425,
+        "calculated_trend": 264937.87099784875
+      },
+      {
+        "DATE": "1990-04-01T00:00:00",
+        "real_GDP": 267755.2,
+        "detrended_real_GDP": 1087.1565876626992,
+        "calculated_trend": 266668.0434123373
+      },
+      {
+        "DATE": "1990-07-01T00:00:00",
+        "real_GDP": 264959.8,
+        "detrended_real_GDP": -3438.4158268258907,
+        "calculated_trend": 268398.2158268259
+      },
+      {
+        "DATE": "1990-10-01T00:00:00",
+        "real_GDP": 264048.2,
+        "detrended_real_GDP": -6080.188241314434,
+        "calculated_trend": 270128.38824131445
+      },
+      {
+        "DATE": "1991-01-01T00:00:00",
+        "real_GDP": 263277.6,
+        "detrended_real_GDP": -8580.960655803094,
+        "calculated_trend": 271858.56065580307
+      },
+      {
+        "DATE": "1991-04-01T00:00:00",
+        "real_GDP": 262945.7,
+        "detrended_real_GDP": -10643.033070291567,
+        "calculated_trend": 273588.7330702916
+      },
+      {
+        "DATE": "1991-07-01T00:00:00",
+        "real_GDP": 262371.5,
+        "detrended_real_GDP": -12947.405484780204,
+        "calculated_trend": 275318.9054847802
+      },
+      {
+        "DATE": "1991-10-01T00:00:00",
+        "real_GDP": 262827.3,
+        "detrended_real_GDP": -14221.777899268782,
+        "calculated_trend": 277049.07789926877
+      },
+      {
+        "DATE": "1992-01-01T00:00:00",
+        "real_GDP": 262846.3,
+        "detrended_real_GDP": -15932.950313757348,
+        "calculated_trend": 278779.25031375734
+      },
+      {
+        "DATE": "1992-04-01T00:00:00",
+        "real_GDP": 262536.1,
+        "detrended_real_GDP": -17973.322728245927,
+        "calculated_trend": 280509.4227282459
+      },
+      {
+        "DATE": "1992-07-01T00:00:00",
+        "real_GDP": 264208.2,
+        "detrended_real_GDP": -18031.39514273446,
+        "calculated_trend": 282239.59514273447
+      },
+      {
+        "DATE": "1992-10-01T00:00:00",
+        "real_GDP": 266048.6,
+        "detrended_real_GDP": -17921.167557223118,
+        "calculated_trend": 283969.7675572231
+      },
+      {
+        "DATE": "1993-01-01T00:00:00",
+        "real_GDP": 267973.1,
+        "detrended_real_GDP": -17726.839971711684,
+        "calculated_trend": 285699.93997171166
+      },
+      {
+        "DATE": "1993-04-01T00:00:00",
+        "real_GDP": 269301.6,
+        "detrended_real_GDP": -18128.51238620025,
+        "calculated_trend": 287430.1123862002
+      },
+      {
+        "DATE": "1993-07-01T00:00:00",
+        "real_GDP": 271423.3,
+        "detrended_real_GDP": -17736.984800688806,
+        "calculated_trend": 289160.2848006888
+      },
+      {
+        "DATE": "1993-10-01T00:00:00",
+        "real_GDP": 273224.8,
+        "detrended_real_GDP": -17665.657215177373,
+        "calculated_trend": 290890.45721517736
+      },
+      {
+        "DATE": "1994-01-01T00:00:00",
+        "real_GDP": 276437.1,
+        "detrended_real_GDP": -16183.529629666009,
+        "calculated_trend": 292620.629629666
+      },
+      {
+        "DATE": "1994-04-01T00:00:00",
+        "real_GDP": 279663,
+        "detrended_real_GDP": -14687.802044154494,
+        "calculated_trend": 294350.8020441545
+      },
+      {
+        "DATE": "1994-07-01T00:00:00",
+        "real_GDP": 282859,
+        "detrended_real_GDP": -13221.974458643119,
+        "calculated_trend": 296080.9744586431
+      },
+      {
+        "DATE": "1994-10-01T00:00:00",
+        "real_GDP": 284574.6,
+        "detrended_real_GDP": -13236.546873131709,
+        "calculated_trend": 297811.1468731317
+      },
+      {
+        "DATE": "1995-01-01T00:00:00",
+        "real_GDP": 284908.8,
+        "detrended_real_GDP": -14632.519287620264,
+        "calculated_trend": 299541.31928762025
+      },
+      {
+        "DATE": "1995-04-01T00:00:00",
+        "real_GDP": 285982.3,
+        "detrended_real_GDP": -15289.191702108888,
+        "calculated_trend": 301271.4917021089
+      },
+      {
+        "DATE": "1995-07-01T00:00:00",
+        "real_GDP": 288712.8,
+        "detrended_real_GDP": -14288.864116597397,
+        "calculated_trend": 303001.6641165974
+      },
+      {
+        "DATE": "1995-10-01T00:00:00",
+        "real_GDP": 289250.3,
+        "detrended_real_GDP": -15481.536531086022,
+        "calculated_trend": 304731.836531086
+      },
+      {
+        "DATE": "1996-01-01T00:00:00",
+        "real_GDP": 290923.9,
+        "detrended_real_GDP": -15538.108945574553,
+        "calculated_trend": 306462.0089455746
+      },
+      {
+        "DATE": "1996-04-01T00:00:00",
+        "real_GDP": 291933.9,
+        "detrended_real_GDP": -16258.28136006312,
+        "calculated_trend": 308192.18136006314
+      },
+      {
+        "DATE": "1996-07-01T00:00:00",
+        "real_GDP": 295311.4,
+        "detrended_real_GDP": -14610.953774551745,
+        "calculated_trend": 309922.35377455177
+      },
+      {
+        "DATE": "1996-10-01T00:00:00",
+        "real_GDP": 299309,
+        "detrended_real_GDP": -12343.526189040276,
+        "calculated_trend": 311652.5261890403
+      },
+      {
+        "DATE": "1997-01-01T00:00:00",
+        "real_GDP": 305004.5,
+        "detrended_real_GDP": -8378.198603528901,
+        "calculated_trend": 313382.6986035289
+      },
+      {
+        "DATE": "1997-04-01T00:00:00",
+        "real_GDP": 307689,
+        "detrended_real_GDP": -7423.871018017468,
+        "calculated_trend": 315112.87101801747
+      },
+      {
+        "DATE": "1997-07-01T00:00:00",
+        "real_GDP": 309854.9,
+        "detrended_real_GDP": -6988.143432506011,
+        "calculated_trend": 316843.04343250603
+      },
+      {
+        "DATE": "1997-10-01T00:00:00",
+        "real_GDP": 313513.8,
+        "detrended_real_GDP": -5059.415846994612,
+        "calculated_trend": 318573.2158469946
+      },
+      {
+        "DATE": "1998-01-01T00:00:00",
+        "real_GDP": 316365,
+        "detrended_real_GDP": -3938.3882614831673,
+        "calculated_trend": 320303.38826148317
+      },
+      {
+        "DATE": "1998-04-01T00:00:00",
+        "real_GDP": 319304,
+        "detrended_real_GDP": -2729.560675971792,
+        "calculated_trend": 322033.5606759718
+      },
+      {
+        "DATE": "1998-07-01T00:00:00",
+        "real_GDP": 321564.6,
+        "detrended_real_GDP": -2199.1330904603237,
+        "calculated_trend": 323763.7330904603
+      },
+      {
+        "DATE": "1998-10-01T00:00:00",
+        "real_GDP": 324659,
+        "detrended_real_GDP": -834.9055049489252,
+        "calculated_trend": 325493.9055049489
+      },
+      {
+        "DATE": "1999-01-01T00:00:00",
+        "real_GDP": 326569.6,
+        "detrended_real_GDP": -654.4779194375151,
+        "calculated_trend": 327224.0779194375
+      },
+      {
+        "DATE": "1999-04-01T00:00:00",
+        "real_GDP": 327139.4,
+        "detrended_real_GDP": -1814.850333926035,
+        "calculated_trend": 328954.25033392606
+      },
+      {
+        "DATE": "1999-07-01T00:00:00",
+        "real_GDP": 332754.9,
+        "detrended_real_GDP": 2070.47725158534,
+        "calculated_trend": 330684.4227484147
+      },
+      {
+        "DATE": "1999-10-01T00:00:00",
+        "real_GDP": 337668.8,
+        "detrended_real_GDP": 5254.204837096797,
+        "calculated_trend": 332414.5951629032
+      },
+      {
+        "DATE": "2000-01-01T00:00:00",
+        "real_GDP": 340388,
+        "detrended_real_GDP": 6243.232422608184,
+        "calculated_trend": 334144.7675773918
+      },
+      {
+        "DATE": "2000-04-01T00:00:00",
+        "real_GDP": 342450.6,
+        "detrended_real_GDP": 6575.660008119594,
+        "calculated_trend": 335874.9399918804
+      },
+      {
+        "DATE": "2000-07-01T00:00:00",
+        "real_GDP": 343455.4,
+        "detrended_real_GDP": 5850.287593631074,
+        "calculated_trend": 337605.11240636895
+      },
+      {
+        "DATE": "2000-10-01T00:00:00",
+        "real_GDP": 344266.6,
+        "detrended_real_GDP": 4931.3151791424025,
+        "calculated_trend": 339335.2848208576
+      },
+      {
+        "DATE": "2001-01-01T00:00:00",
+        "real_GDP": 348277.2,
+        "detrended_real_GDP": 7211.742764653929,
+        "calculated_trend": 341065.4572353461
+      },
+      {
+        "DATE": "2001-04-01T00:00:00",
+        "real_GDP": 350966.9,
+        "detrended_real_GDP": 8171.270350165316,
+        "calculated_trend": 342795.6296498347
+      },
+      {
+        "DATE": "2001-07-01T00:00:00",
+        "real_GDP": 353674.8,
+        "detrended_real_GDP": 9148.997935676714,
+        "calculated_trend": 344525.8020643233
+      },
+      {
+        "DATE": "2001-10-01T00:00:00",
+        "real_GDP": 355061.7,
+        "detrended_real_GDP": 8805.725521188171,
+        "calculated_trend": 346255.97447881184
+      },
+      {
+        "DATE": "2002-01-01T00:00:00",
+        "real_GDP": 356452.2,
+        "detrended_real_GDP": 8466.053106699605,
+        "calculated_trend": 347986.1468933004
+      },
+      {
+        "DATE": "2002-04-01T00:00:00",
+        "real_GDP": 358198.7,
+        "detrended_real_GDP": 8482.380692211038,
+        "calculated_trend": 349716.319307789
+      },
+      {
+        "DATE": "2002-07-01T00:00:00",
+        "real_GDP": 360580,
+        "detrended_real_GDP": 9133.508277722402,
+        "calculated_trend": 351446.4917222776
+      },
+      {
+        "DATE": "2002-10-01T00:00:00",
+        "real_GDP": 363426.9,
+        "detrended_real_GDP": 10250.235863233916,
+        "calculated_trend": 353176.6641367661
+      },
+      {
+        "DATE": "2003-01-01T00:00:00",
+        "real_GDP": 366132.2,
+        "detrended_real_GDP": 11225.36344874528,
+        "calculated_trend": 354906.83655125473
+      },
+      {
+        "DATE": "2003-04-01T00:00:00",
+        "real_GDP": 369474.1,
+        "detrended_real_GDP": 12837.091034256679,
+        "calculated_trend": 356637.0089657433
+      },
+      {
+        "DATE": "2003-07-01T00:00:00",
+        "real_GDP": 373682.7,
+        "detrended_real_GDP": 15315.518619768147,
+        "calculated_trend": 358367.18138023186
+      },
+      {
+        "DATE": "2003-10-01T00:00:00",
+        "real_GDP": 377159.2,
+        "detrended_real_GDP": 17061.846205279522,
+        "calculated_trend": 360097.3537947205
+      },
+      {
+        "DATE": "2004-01-01T00:00:00",
+        "real_GDP": 378483.7,
+        "detrended_real_GDP": 16656.173790791014,
+        "calculated_trend": 361827.526209209
+      },
+      {
+        "DATE": "2004-04-01T00:00:00",
+        "real_GDP": 379876.7,
+        "detrended_real_GDP": 16319.001376302389,
+        "calculated_trend": 363557.6986236976
+      },
+      {
+        "DATE": "2004-07-01T00:00:00",
+        "real_GDP": 380558.5,
+        "detrended_real_GDP": 15270.62896181381,
+        "calculated_trend": 365287.8710381862
+      },
+      {
+        "DATE": "2004-10-01T00:00:00",
+        "real_GDP": 381513.8,
+        "detrended_real_GDP": 14495.756547325233,
+        "calculated_trend": 367018.04345267476
+      },
+      {
+        "DATE": "2005-01-01T00:00:00",
+        "real_GDP": 384555.2,
+        "detrended_real_GDP": 15806.984132836631,
+        "calculated_trend": 368748.2158671634
+      },
+      {
+        "DATE": "2005-04-01T00:00:00",
+        "real_GDP": 389073.9,
+        "detrended_real_GDP": 18595.511718348134,
+        "calculated_trend": 370478.3882816519
+      },
+      {
+        "DATE": "2005-07-01T00:00:00",
+        "real_GDP": 393177.4,
+        "detrended_real_GDP": 20968.83930385951,
+        "calculated_trend": 372208.5606961405
+      },
+      {
+        "DATE": "2005-10-01T00:00:00",
+        "real_GDP": 398565.4,
+        "detrended_real_GDP": 24626.666889370943,
+        "calculated_trend": 373938.7331106291
+      },
+      {
+        "DATE": "2006-01-01T00:00:00",
+        "real_GDP": 400418.8,
+        "detrended_real_GDP": 24749.89447488234,
+        "calculated_trend": 375668.90552511765
+      },
+      {
+        "DATE": "2006-04-01T00:00:00",
+        "real_GDP": 401500.9,
+        "detrended_real_GDP": 24101.82206039381,
+        "calculated_trend": 377399.0779396062
+      },
+      {
+        "DATE": "2006-07-01T00:00:00",
+        "real_GDP": 401873.5,
+        "detrended_real_GDP": 22744.24964590522,
+        "calculated_trend": 379129.2503540948
+      },
+      {
+        "DATE": "2006-10-01T00:00:00",
+        "real_GDP": 403746.8,
+        "detrended_real_GDP": 22887.377231416584,
+        "calculated_trend": 380859.4227685834
+      },
+      {
+        "DATE": "2007-01-01T00:00:00",
+        "real_GDP": 407553.3,
+        "detrended_real_GDP": 24963.704816928075,
+        "calculated_trend": 382589.5951830719
+      },
+      {
+        "DATE": "2007-04-01T00:00:00",
+        "real_GDP": 409851.3,
+        "detrended_real_GDP": 25531.53240243945,
+        "calculated_trend": 384319.76759756054
+      },
+      {
+        "DATE": "2007-07-01T00:00:00",
+        "real_GDP": 412986.5,
+        "detrended_real_GDP": 26936.559987950895,
+        "calculated_trend": 386049.9400120491
+      },
+      {
+        "DATE": "2007-10-01T00:00:00",
+        "real_GDP": 415095.1,
+        "detrended_real_GDP": 27314.987573462306,
+        "calculated_trend": 387780.1124265377
+      },
+      {
+        "DATE": "2008-01-01T00:00:00",
+        "real_GDP": 417322.8,
+        "detrended_real_GDP": 27812.515158973692,
+        "calculated_trend": 389510.2848410263
+      },
+      {
+        "DATE": "2008-04-01T00:00:00",
+        "real_GDP": 414987.5,
+        "detrended_real_GDP": 23747.042744485196,
+        "calculated_trend": 391240.4572555148
+      },
+      {
+        "DATE": "2008-07-01T00:00:00",
+        "real_GDP": 408503.4,
+        "detrended_real_GDP": 15532.770329996594,
+        "calculated_trend": 392970.6296700034
+      },
+      {
+        "DATE": "2008-10-01T00:00:00",
+        "real_GDP": 400086.1,
+        "detrended_real_GDP": 5385.297915507981,
+        "calculated_trend": 394700.802084492
+      },
+      {
+        "DATE": "2009-01-01T00:00:00",
+        "real_GDP": 393329.4,
+        "detrended_real_GDP": -3101.574498980539,
+        "calculated_trend": 396430.97449898056
+      },
+      {
+        "DATE": "2009-04-01T00:00:00",
+        "real_GDP": 392582.5,
+        "detrended_real_GDP": -5578.646913469187,
+        "calculated_trend": 398161.1469134692
+      },
+      {
+        "DATE": "2009-07-01T00:00:00",
+        "real_GDP": 393068,
+        "detrended_real_GDP": -6823.319327957695,
+        "calculated_trend": 399891.3193279577
+      },
+      {
+        "DATE": "2009-10-01T00:00:00",
+        "real_GDP": 394414.1,
+        "detrended_real_GDP": -7207.391742446343,
+        "calculated_trend": 401621.4917424463
+      },
+      {
+        "DATE": "2010-01-01T00:00:00",
+        "real_GDP": 396944,
+        "detrended_real_GDP": -6407.664156934887,
+        "calculated_trend": 403351.6641569349
+      },
+      {
+        "DATE": "2010-04-01T00:00:00",
+        "real_GDP": 401031.9,
+        "detrended_real_GDP": -4049.93657142343,
+        "calculated_trend": 405081.83657142345
+      },
+      {
+        "DATE": "2010-07-01T00:00:00",
+        "real_GDP": 403957.8,
+        "detrended_real_GDP": -2854.2089859120315,
+        "calculated_trend": 406812.008985912
+      },
+      {
+        "DATE": "2010-10-01T00:00:00",
+        "real_GDP": 404093.3,
+        "detrended_real_GDP": -4448.881400400598,
+        "calculated_trend": 408542.1814004006
+      },
+      {
+        "DATE": "2011-01-01T00:00:00",
+        "real_GDP": 405552.3,
+        "detrended_real_GDP": -4720.053814889223,
+        "calculated_trend": 410272.3538148892
+      },
+      {
+        "DATE": "2011-04-01T00:00:00",
+        "real_GDP": 405899.7,
+        "detrended_real_GDP": -6102.826229377708,
+        "calculated_trend": 412002.5262293777
+      },
+      {
+        "DATE": "2011-07-01T00:00:00",
+        "real_GDP": 407265,
+        "detrended_real_GDP": -6467.698643866344,
+        "calculated_trend": 413732.69864386634
+      },
+      {
+        "DATE": "2011-10-01T00:00:00",
+        "real_GDP": 407798.2,
+        "detrended_real_GDP": -7664.671058354899,
+        "calculated_trend": 415462.8710583549
+      },
+      {
+        "DATE": "2012-01-01T00:00:00",
+        "real_GDP": 410623.4,
+        "detrended_real_GDP": -6569.643472843454,
+        "calculated_trend": 417193.0434728435
+      },
+      {
+        "DATE": "2012-04-01T00:00:00",
+        "real_GDP": 410019.8,
+        "detrended_real_GDP": -8903.415887332114,
+        "calculated_trend": 418923.2158873321
+      },
+      {
+        "DATE": "2012-07-01T00:00:00",
+        "real_GDP": 415017.9,
+        "detrended_real_GDP": -5635.488301820587,
+        "calculated_trend": 420653.3883018206
+      },
+      {
+        "DATE": "2012-10-01T00:00:00",
+        "real_GDP": 414119,
+        "detrended_real_GDP": -8264.560716309235,
+        "calculated_trend": 422383.56071630924
+      },
+      {
+        "DATE": "2013-01-01T00:00:00",
+        "real_GDP": 416310.1,
+        "detrended_real_GDP": -7803.633130797825,
+        "calculated_trend": 424113.7331307978
+      },
+      {
+        "DATE": "2013-04-01T00:00:00",
+        "real_GDP": 419657.3,
+        "detrended_real_GDP": -6186.60554528638,
+        "calculated_trend": 425843.90554528637
+      },
+      {
+        "DATE": "2013-07-01T00:00:00",
+        "real_GDP": 423580.2,
+        "detrended_real_GDP": -3993.8779597749235,
+        "calculated_trend": 427574.07795977494
+      },
+      {
+        "DATE": "2013-10-01T00:00:00",
+        "real_GDP": 426299.4,
+        "detrended_real_GDP": -3004.8503742634784,
+        "calculated_trend": 429304.2503742635
+      },
+      {
+        "DATE": "2014-01-01T00:00:00",
+        "real_GDP": 429573.5,
+        "detrended_real_GDP": -1460.9227887521265,
+        "calculated_trend": 431034.4227887521
+      },
+      {
+        "DATE": "2014-04-01T00:00:00",
+        "real_GDP": 432370,
+        "detrended_real_GDP": -394.5952032406931,
+        "calculated_trend": 432764.5952032407
+      },
+      {
+        "DATE": "2014-07-01T00:00:00",
+        "real_GDP": 434809.6,
+        "detrended_real_GDP": 314.83238227071706,
+        "calculated_trend": 434494.76761772926
+      },
+      {
+        "DATE": "2014-10-01T00:00:00",
+        "real_GDP": 437355.1,
+        "detrended_real_GDP": 1130.1599677821505,
+        "calculated_trend": 436224.9400322178
+      },
+      {
+        "DATE": "2015-01-01T00:00:00",
+        "real_GDP": 439721.7,
+        "detrended_real_GDP": 1766.5875532936188,
+        "calculated_trend": 437955.1124467064
+      },
+      {
+        "DATE": "2015-04-01T00:00:00",
+        "real_GDP": 443005.4,
+        "detrended_real_GDP": 3320.115138805064,
+        "calculated_trend": 439685.28486119496
+      },
+      {
+        "DATE": "2015-07-01T00:00:00",
+        "real_GDP": 444720.6,
+        "detrended_real_GDP": 3305.1427243163926,
+        "calculated_trend": 441415.4572756836
+      },
+      {
+        "DATE": "2015-10-01T00:00:00",
+        "real_GDP": 447638.7,
+        "detrended_real_GDP": 4493.070309827861,
+        "calculated_trend": 443145.62969017215
+      },
+      {
+        "DATE": "2016-01-01T00:00:00",
+        "real_GDP": 448529.7,
+        "detrended_real_GDP": 3653.8978953392943,
+        "calculated_trend": 444875.8021046607
+      },
+      {
+        "DATE": "2016-04-01T00:00:00",
+        "real_GDP": 450560.2,
+        "detrended_real_GDP": 3954.2254808507278,
+        "calculated_trend": 446605.9745191493
+      },
+      {
+        "DATE": "2016-07-01T00:00:00",
+        "real_GDP": 451936.8,
+        "detrended_real_GDP": 3600.653066362138,
+        "calculated_trend": 448336.14693363785
+      },
+      {
+        "DATE": "2016-10-01T00:00:00",
+        "real_GDP": 454633.4,
+        "detrended_real_GDP": 4567.080651873548,
+        "calculated_trend": 450066.3193481265
+      },
+      {
+        "DATE": "2017-01-01T00:00:00",
+        "real_GDP": 456888.8,
+        "detrended_real_GDP": 5092.308237384947,
+        "calculated_trend": 451796.49176261504
+      },
+      {
+        "DATE": "2017-04-01T00:00:00",
+        "real_GDP": 458227.1,
+        "detrended_real_GDP": 4700.435822896368,
+        "calculated_trend": 453526.6641771036
+      },
+      {
+        "DATE": "2017-07-01T00:00:00",
+        "real_GDP": 460167.3,
+        "detrended_real_GDP": 4910.463408407813,
+        "calculated_trend": 455256.8365915922
+      },
+      {
+        "DATE": "2017-10-01T00:00:00",
+        "real_GDP": 461800.9,
+        "detrended_real_GDP": 4813.890993919282,
+        "calculated_trend": 456987.00900608074
+      },
+      {
+        "DATE": "2018-01-01T00:00:00",
+        "real_GDP": 462119.7,
+        "detrended_real_GDP": 3402.5185794307035,
+        "calculated_trend": 458717.1814205693
+      },
+      {
+        "DATE": "2018-04-01T00:00:00",
+        "real_GDP": 463887.9,
+        "detrended_real_GDP": 3440.5461649420904,
+        "calculated_trend": 460447.35383505793
+      },
+      {
+        "DATE": "2018-07-01T00:00:00",
+        "real_GDP": 466654.8,
+        "detrended_real_GDP": 4477.273750453489,
+        "calculated_trend": 462177.5262495465
+      },
+      {
+        "DATE": "2018-10-01T00:00:00",
+        "real_GDP": 467433,
+        "detrended_real_GDP": 3525.301335964934,
+        "calculated_trend": 463907.69866403507
+      },
+      {
+        "DATE": "2019-01-01T00:00:00",
+        "real_GDP": 470015,
+        "detrended_real_GDP": 4377.128921476367,
+        "calculated_trend": 465637.87107852363
+      },
+      {
+        "DATE": "2019-04-01T00:00:00",
+        "real_GDP": 470665.5,
+        "detrended_real_GDP": 3297.456506987801,
+        "calculated_trend": 467368.0434930122
+      },
+      {
+        "DATE": "2019-07-01T00:00:00",
+        "real_GDP": 473006,
+        "detrended_real_GDP": 3907.7840924992342,
+        "calculated_trend": 469098.21590750077
+      },
+      {
+        "DATE": "2019-10-01T00:00:00",
+        "real_GDP": 473087.6,
+        "detrended_real_GDP": 2259.211678010586,
+        "calculated_trend": 470828.3883219894
+      },
+      {
+        "DATE": "2020-01-01T00:00:00",
+        "real_GDP": 458804.7,
+        "detrended_real_GDP": -13753.860736477945,
+        "calculated_trend": 472558.56073647796
+      },
+      {
+        "DATE": "2020-04-01T00:00:00",
+        "real_GDP": 372766.5,
+        "detrended_real_GDP": -101522.23315096652,
+        "calculated_trend": 474288.7331509665
+      },
+      {
+        "DATE": "2020-07-01T00:00:00",
+        "real_GDP": 432422.1,
+        "detrended_real_GDP": -43596.80556545511,
+        "calculated_trend": 476018.9055654551
+      }
+    ]
+  }
+}
