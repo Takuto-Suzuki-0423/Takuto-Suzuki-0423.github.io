@@ -10,7 +10,7 @@
 <!-- They can be used to leave notes in the code -->
 
 <!DOCTYPE html>
-<html> 
+<html lang="eng"> 
     <!-- HTML is heirarchial: tags like this define elements on the page. 
     Each tag does something different. For example:
         - The <html> tag defines the whole document.
@@ -25,135 +25,323 @@
     <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
     <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+    <link rel="stylesheet" href="footer.css">
+    <title>DS Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
 
     <!-- This is a link to the vega-lite which we're using to make graphs -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+
+    <style id="vega-tooltip-style">
+    #vg-tooltip-element {
+    visibility: hidden;
+    padding: 8px;
+    position: fixed;
+    z-index: 1000;
+    font-family: sans-serif;
+    font-size: 11px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* The default theme is the light theme. */
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d9d9d9;
+    color: black; }
+    #vg-tooltip-element.visible {
+      visibility: visible; }
+    #vg-tooltip-element h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 13px; }
+    #vg-tooltip-element img {
+      max-width: 200px;
+      max-height: 200px; }
+    #vg-tooltip-element table {
+      border-spacing: 0; }
+    #vg-tooltip-element table tr {
+        border: none; }
+    #vg-tooltip-element table tr td {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-top: 2px;
+          padding-bottom: 2px; }
+    #vg-tooltip-element table tr td.key {
+            color: #808080;
+            max-width: 150px;
+            text-align: right;
+            padding-right: 4px; }
+    #vg-tooltip-element table tr td.value {
+            display: block;
+            max-width: 300px;
+            max-height: 7em;
+            text-align: left; }
+    #vg-tooltip-element.dark-theme {
+      background-color: rgba(32, 32, 32, 0.9);
+      border: 1px solid #f5f5f5;
+      color: white; }
+      #vg-tooltip-element.dark-theme td.key {
+        color: #bfbfbf; }
+  </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
 </head>
 
 <body> 
+    <nav class="navbar">
+        <div class="page-title"></div>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="Project.html">Project</a></li>
+            <li><a href="https://github.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io"><i class="fa fa-github"></i>Github</a></li>
+          </ul>
+        </div>
+      </nav>
+    
 <!-- The body tag contains the elements that visitors to our page will see. -->
     <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
         <!-- This is a header, it is the largest text on the page -->
-        Takuto Suzuki
+        Data Science 2024
     </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Takuto |   <a
-            href="https://github.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io">GitHub</a>
-    </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.  
-    </h3>
+    <h3>Portfolio Tasks</h3>
+    
+
+    
+    
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
+    <section class="container">
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 1 - Embedding</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location1" role="graphics-document" aria-roledescription="visualization" aria-label="GDP per capita" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+               Graph from week 1 code example in the Dropbox.  
             </p>
         </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 1 - Embedding</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location2" role="graphics-document" aria-roledescription="visualization" aria-label="GDP per capita_time series" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
             <p>
-                This is a graph of GDP.
-            </p>    
-        <figure id="Location2"></figure>        
-    </section>
+                This graph is from chart library, and measuring bank rate of Bank of England.
 
-    
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: Comparison of Unemployment rate in Japan and the UK</h2>
-            <p> This section contains a graph for unemployment in Japan and UK. 
-                
+            </p>           
+        </div>
+
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 2 - Create visualization</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location3" role="graphics-document" aria-roledescription="visualization" aria-label="Japan employment" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p>
+                This graph is created by the "create" tool in Economics Observatory. It shows Japan unemployment rate over time.
+
+            </p>           
+        </div>
+
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 2 - Create visualization</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location4" role="graphics-document" aria-roledescription="visualization" aria-label="UK employment" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 327px;"></canvas><form class="vega-bindings"></form></div>    
+            <p>
+                This graph is also from Economics Observatory and made by using the "create" tool. It measures long-term UK unemployment rate. 
+
+            </p>           
+        </div>
+
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 3 - Festival of Economis</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location5" role="graphics-document" aria-roledescription="visualization" aria-label="Britishempire" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+                The British Empire was spreading across the world and influenced many countries. In particular, educational gap is still large in India.
+            </p>          
+        </div>
+
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 3 - Festival of Economis</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location6" role="graphics-document" aria-roledescription="visualization" aria-label="India literacy" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+                Literacy rate in India is increasing, but still some children cannot get access to education. The British Empire caused these gap in India.
+            </p>          
+        </div>
+
+        <div class="card2">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 4 - Chart Replication</span>
+                </span>
+            </div>
+            <img src="fredgraph_exchangerate.png" class="img"/>
+            <p> 
+                This is the original graph of Japanese Yen to U.S. Dollar Spot Exchange Rate from FRED.
+            </p>          
+        </div>
+
+        <div class="card2">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 4 - Chart Replication</span>
+                </span>
+            </div>
+            <div class="chart2 vega-embed" id="Location7" role="graphics-document" aria-roledescription="visualization" aria-label="japan us exchange rate" style="cursor: default;"><form class="vega-bindings"></form></div>    
+            <p> 
+                This is the replicated chart.
+            </p>          
+        </div>
+
+        <div class="card2">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 4 - Chart Replication</span>
+                </span>
+            </div>
+            <div class="chart2 vega-embed" id="Location8" role="graphics-document" aria-roledescription="visualization" aria-label="revised japan us exchange rate" style="cursor: default;"><canvas width="500" height="400" class="marks" style="width: 500px;; height:357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+                I changed the scale of y axis, and placed a tick for every 50.
+            </p>          
+        </div>
+
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 5 - Scraping</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location20" role="graphics-document" aria-roledescription="visualization" aria-label="employment level by course" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+                Since my project will be about education and its outcome, I chose this site which is about employment levels by course of study
+                . The source code is <a href="https://colab.research.google.com/drive/1uFIdg0AWxGK5PXa_QLL9RmLM1vlk_W0T?usp=sharing" style="color:darkblue">here</a>.
+            </p>          
+        </div>
+
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 6 - ONS API</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location21" role="graphics-document" aria-roledescription="visualization" aria-label="employment male aged 18-24" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <!--<div class="chart vega-embed" id="Location9" role="graphics-document" aria-roledescription="visualization" aria-label="employment all aged 18-24" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <div class="chart vega-embed" id="Location10" role="graphics-document" aria-roledescription="visualization" aria-label="employment all aged 25-34" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <div class="chart vega-embed" id="Location11" role="graphics-document" aria-roledescription="visualization" aria-label="employment all aged 35-49" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <div class="chart vega-embed" id="Location12" role="graphics-document" aria-roledescription="visualization" aria-label="employment male aged 18-24" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <div class="chart vega-embed" id="Location13" role="graphics-document" aria-roledescription="visualization" aria-label="employment male aged 25-34" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <div class="chart vega-embed" id="Location14" role="graphics-document" aria-roledescription="visualization" aria-label="employment male aged 35-49" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <div class="chart vega-embed" id="Location15" role="graphics-document" aria-roledescription="visualization" aria-label="employment female aged 18-24" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <div class="chart vega-embed" id="Location16" role="graphics-document" aria-roledescription="visualization" aria-label="employment female aged 25-34" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <div class="chart vega-embed" id="Location17" role="graphics-document" aria-roledescription="visualization" aria-label="employment female aged 35-49" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+        -->
+            <p> 
+                I made 9 charts above using ONS API. The python notebook I made is 
+                    <a href="https://colab.research.google.com/drive/1eljxjpf1ELW781-e5WbUVZ26n0Cg45vc?usp=sharing" style="color:darkblue">here</a>.
+            </p>          
+        </div>
+
+        <div class="card2">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 7 - Maps</span>
+                </span>
+            </div>
+            <div class="chart2 vega-embed" id="Location18" role="graphics-document" aria-roledescription="visualization" aria-label="Japan map" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <p>
+                This is the Japanese geographical map.
             </p>
         </div>
-        <figure id="Location3"></figure> 
-        <figure id="Location4"></figure>        
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 3: Legacy of Empire</h2>
-            <p> The British Empire was spreading across the world and influenced many countries. In particular, educational gap is still large in India.
+        
+        <div class="card2">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 7 - Maps</span>
+                </span>
+            </div>
+            <div class="chart2 vega-embed" id="Location19" role="graphics-document" aria-roledescription="visualization" aria-label="Japan map population" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>
+            <p>
+                This map indicates japanese population for each prefecture.
             </p>
         </div>
-        <figure id="Location5"></figure>
-        <figure id="Location6"></figure> 
-        <div class="chart-description">
-            <p> Literacy rate in India is increasing, but still some children cannot get access to education. The British Empire caused these gap in India.
-            </p>    
-    </section>
-    
-    <section>
-        <div class="chart-description">
-            <h2> Section 4: Replication</h2>
-            <p>  I replicate the graph of Japanese Yen to U.S. Dollar Spot Exchange Rate
-            </p>
-        </div>
-        <img src="fredgraph_exchangerate.png"/>
-        <figure id="Location7"></figure>
-        <div class="chart-description">
-            <P> Above is the replicated chart.
-            </P>
-        </div>
-        <figure id="Location8"></figure> 
-        <div class="chart-description">
-            <p> I changed the scale of y axis, and placed a tick for every 50.
-            </p>
-        </div>     
 
-            
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2> Section 5: Scraping </h2>
-            <p>Since my project will be about education and its outcome, I chose this site which is about employment levels by course of study
-                . The source code is <a href="https://colab.research.google.com/drive/1uFIdg0AWxGK5PXa_QLL9RmLM1vlk_W0T?usp=sharing">here</a>.</p>
-
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 8 - Analytics charts</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location24" role="graphics-document" aria-roledescription="visualization" aria-label="higher education gdp" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+                I made a scatter plot of GDP per capita and higher education rate, and draw a regression line.
+            </p>          
         </div>
-        <figure id = Location20></figure>
 
-    <section>
-        <div class = "chart-description">
-            <h2> Section 6: ONS API practice</h2>
-            <p> I made 9 charts below using ONS API. The python notebook I made is 
-                <a href="https://colab.research.google.com/drive/1IzwGXuVksRSSvCAHoUIoPG8NY6owtlyV?usp=sharing">here</a> .</p>
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 8 - Analytics charts</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location25" role="graphics-document" aria-roledescription="visualization" aria-label="uk GDP trend" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+                I calculated the time trend of UK GDP and plot as a line charts. The python code is <a href="https://colab.research.google.com/drive/1eljxjpf1ELW781-e5WbUVZ26n0Cg45vc?usp=sharing" style="color:darkblue">here</a>.
+            </p>          
         </div>
-        <figure id="Location9"></figure>
-        <figure id="Location10"></figure> 
-        <figure id="Location11"></figure>
-        <figure id="Location12"></figure>
-        <figure id="Location13"></figure>
-        <figure id="Location14"></figure>
-        <figure id="Location15"></figure>
-        <figure id="Location16"></figure>
-        <figure id="Location17"></figure>
-    </section>
-    
-    <section>
-        <div class="chart-description">
-            <h2> Section 7: Maps </h2>
-            <P>
-                Following maps indicate the Japanse geographic map and the population for each prefecture in Japan.
-            </P>
+        
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 9 - Big data</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location22" role="graphics-document" aria-roledescription="visualization" aria-label="crisps" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+               I aggregate the price of crisps by mean and group by year. Then, visualize by a simple line chart. 
+            </p>          
+        </div>
 
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 9 - Big data</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location23" role="graphics-document" aria-roledescription="visualization" aria-label="chocolate price" style="cursor: default;"><canvas width="510" height="535" class="marks" style="width: 340px; height: 357px;"></canvas><form class="vega-bindings"></form></div>    
+            <p> 
+                I aggregate the price of chocolate coated peanut by median and group by shop code. Then, I make a diistribution chart fo the price.
+            </p>          
         </div>
-        <figure id="Location18"></figure>
-        <figure id="Location19"></figure>
+
+
+
     </section>    
+
+    
+     
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
@@ -164,13 +352,13 @@
     <script>
         // This is a comment in JavaScript - it's a different language to HTML and CSS
 
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
+        let figure_1_spec = "wk1_chart2.json"; // We're storing the URL of the graph we want to display in a variable
                                                                                                                     // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
 
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 
-        let figure_2_spec ="https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/ONSgdp/chartGDP11.json"
-        vegaEmbed('#Location2', figure_2_spec)
+        let figure_2_spec ="chartLine9.json"
+        vegaEmbed('#Location2', figure_2_spec, {"actions":false})
 
         let figure_3_spec ="jpnunemployment.json"
         vegaEmbed('#Location3', figure_3_spec)
@@ -190,31 +378,31 @@
         let figure_8_spec = "RevisedExchangerate.json"
         vegaEmbed('#Location8', figure_8_spec)
 
-        let figure_9_spec = "chart_Exports.json"
+        let figure_9_spec = "chart_spec_YBUD.json"
         vegaEmbed('#Location9', figure_9_spec)
 
-        let figure_10_spec = "chart_GDP.json"
+        let figure_10_spec = "chart_spec_YBUG.json"
         vegaEmbed('#Location10', figure_10_spec)
 
-        let figure_11_spec = "chart_Imports.json"
+        let figure_11_spec = "chart_spec_YBUJ.json"
         vegaEmbed('#Location11', figure_11_spec)
 
-        let figure_12_spec = "chart_Inflation.json"
+        let figure_12_spec = "chart_spec_YBUE.json"
         vegaEmbed('#Location12', figure_12_spec)
 
-        let figure_13_spec = "chart_Investment.json"
+        let figure_13_spec = "chart_spec_YBUH.json"
         vegaEmbed('#Location13', figure_13_spec)
 
-        let figure_14_spec = "chart_Output.json"
+        let figure_14_spec = "chart_spec_YBUK.json"
         vegaEmbed('#Location14', figure_14_spec)
 
-        let figure_15_spec = "chart_R&D Expenditure.json"
+        let figure_15_spec = "chart_spec_YBUF.json"
         vegaEmbed('#Location15', figure_15_spec)
 
-        let figure_16_spec = "chart_UK Population.json"
+        let figure_16_spec = "chart_spec_YBUJ.json"
         vegaEmbed('#Location16', figure_16_spec)
 
-        let figure_17_spec = "chart_Unemployment.json"
+        let figure_17_spec = "chart_spec_YBUL.json"
         vegaEmbed('#Location17', figure_17_spec)
 
         let figure_18_spec = "japan_map.json"
@@ -226,6 +414,30 @@
         let figure_20_spec = "course_employment.json"
         vegaEmbed('#Location20', figure_20_spec)
 
+        let figure_21_spec = "loop_employment.json"
+        vegaEmbed('#Location21', figure_21_spec)
+
+        let figure_22_spec = "crisps_price.json"
+        vegaEmbed('#Location22', figure_22_spec)
+
+        let figure_23_spec = "Task9_pricedistribution.json"
+        vegaEmbed('#Location23', figure_23_spec)
+
+        let figure_24_spec = "gdp_higher_education.json"
+        vegaEmbed('#Location24', figure_24_spec)
+
+        let figure_25_spec = "ukGDPtrend.json"
+        vegaEmbed('#Location25', figure_25_spec)
+
+
+
+        $(window).on("load",function(){
+              $(".loader-wrapper").fadeOut("fast");
+            });
+
+
+        
+
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
         // e.g. 
@@ -234,6 +446,8 @@
 
 
     </script>
+
+<div id="vg-tooltip-element" class="vg-tooltip" style="top: 500px; left: 825px"><table><tbody><tr><td class="key">Tide:</td><td class="value">High</td></tr><tr><td class="key">Height (m):</td><td class="value">4.57</td></tr><tr><td class="key">Date:</td><td class="value">Jan 14, 2022</td></tr><tr><td class="key">Time:</td><td class="value">15:22</td></tr></tbody></table></div>
 
 </body>
     
