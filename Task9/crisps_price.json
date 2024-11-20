@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task9/crisps_price.csv"
+  },
+  "title": {"text": "Price of crisps 25g-50g"},
+  "width": 300,
+  "height": 300,
+  "mark": {"type": "line", "color": "red"},
+  "encoding": {
+    "x": {"field": "year", "type": "temporal"},
+    "y": {"field": "price", "type": "quantitative"}
+  },
+  "config": {}
+}
