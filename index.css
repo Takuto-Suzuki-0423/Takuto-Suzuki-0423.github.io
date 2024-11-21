@@ -6,15 +6,10 @@
 
 body { /* We can style any HTML element by using its name - here we're styling the body */
   /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.6;
+ 
   /* we want a white page, that's centered and not too wide */
   background-color: #f1f1ee;
-  margin:0 auto;
-  max-width: 800px;
-  padding-top: 60px;
+ 
 }
 
 
@@ -99,22 +94,19 @@ h3 {
   margin: 10px;
   padding: 10px;
   padding-top: 3px;
-  height: 360px;
-  width: 550px;
+  height: fit-content;
+  width: fit-content;
   align-items: center;
   justify-content: center;
 }
 
-.img{
-    margin: 10px;
-    padding: 10px;
-    padding-top: 3px;
-    height: 360px;
-    width: 550px;
-    align-items: center;
-    justify-content: center;
-  
-}
+
+
+
+
+
+
+
 
 .vega-embed {
   position: relative;
@@ -135,12 +127,17 @@ h3 {
 .chart#Location21 {
   overflow: scroll;
 }
-.chart#chart1{
-  overflow: scroll;
+.chart#Location8{
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
-.chart#Location18 {
-  overflow: scroll;
+.chart#Location7{
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
+
+
+
 
 
 .container {
@@ -167,16 +164,19 @@ h3 {
   flex-direction: column;
 }
 
-.card2 {background: white;
-  width: 600px;
+.card2 {
+  background: white;
+  width: 800px;
   min-height: 300px;
   border-radius: 10px;
   margin: 30px;
-  padding: 20px;
+  padding: 5px;
   border: #76939e solid 6px;
   display: flex;
   flex-direction: column;
 }
+
+
 
 .card h5 {
   padding-top: 10px;
@@ -191,6 +191,8 @@ h3 {
   font-family: sans-serif;
   margin: 0;
 }
+
+
 
 
 .card p {
@@ -212,10 +214,13 @@ h3 {
 }
 
 
+
+
 .card .category .tag {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
   padding: 5px;
+  
   
 }
 
@@ -224,7 +229,11 @@ h3 {
   font-weight: 700;
   padding: 5px;
   
+  
 }
+
+
+
 
 .navbar {
   display: flex;
