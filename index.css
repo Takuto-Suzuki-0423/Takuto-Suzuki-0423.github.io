@@ -81,11 +81,11 @@ h3 {
 }
 
 .chart {
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
   padding-top: 3px;
   height: 360px;
-  width: 340px;
+  width: 320px;
   align-items: center;
   justify-content: center;
 }
@@ -109,10 +109,12 @@ h3 {
 
 
 .vega-embed {
-  position: relative;
+  position:relative;
   display: inline-block;
   box-sizing: border-box;
 }
+
+
 
 .div {
   display: block;
@@ -125,7 +127,8 @@ h3 {
 
 
 .chart#Location21 {
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 .chart#Location8{
   overflow-x: scroll;
@@ -135,6 +138,7 @@ h3 {
   overflow-x: scroll;
   overflow-y: hidden;
 }
+
 
 
 
@@ -155,7 +159,7 @@ h3 {
 .card {
   background: white;
   width: 370px;
-  min-height: 300px;
+  min-height: 200px;
   border-radius: 10px;
   margin: 30px;
   padding: 5px;

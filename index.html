@@ -4,7 +4,7 @@
 <head>
     
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="footer.css">
+    
     <title>DS Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
 
     <!-- This is a link to the vega-lite which we're using to make graphs -->
@@ -15,7 +15,125 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style id="vega-embed-style">.vega-embed {
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+      }
+      .vega-embed details:not([open]) > :not(summary) {
+        display: none !important;
+      }
 
+      .vega-embed.has-actions{padding: 10px;
+    padding-left: 15px;}
+      .vega-embed summary {
+        list-style: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 6px;
+        z-index: 1000;
+        background: white;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        color: #1b1e23;
+        border: 1px solid #aaa;
+        border-radius: 999px;
+        opacity: 0.2;
+        transition: opacity 0.4s ease-in;
+        cursor: pointer;
+        line-height: 0px;
+      }
+      .vega-embed summary::-webkit-details-marker {
+        display: none;
+      }
+      .vega-embed summary:active {
+        box-shadow: #aaa 0px 0px 0px 1px inset;
+      }
+      .vega-embed summary svg {
+        width: 14px;
+        height: 14px;
+      }
+      .vega-embed details[open] summary {
+        opacity: 0.7;
+      }
+      .vega-embed:hover summary, .vega-embed:focus-within summary {
+        opacity: 1 !important;
+        transition: opacity 0.2s ease;
+      }
+      .vega-embed .vega-actions {
+        position: absolute;
+        z-index: 1001;
+        top: 35px;
+        right: -9px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #d9d9d9;
+        background: white;
+        animation-duration: 0.15s;
+        animation-name: scale-in;
+        animation-timing-function: cubic-bezier(0.2, 0, 0.13, 1.5);
+        text-align: left;
+      }
+      .vega-embed .vega-actions a {
+        padding: 8px 16px;
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        color: #434a56;
+        text-decoration: none;
+      }
+      .vega-embed .vega-actions a:hover, .vega-embed .vega-actions a:focus {
+        background-color: #f7f7f9;
+        color: black;
+      }
+      .vega-embed .vega-actions::before, .vega-embed .vega-actions::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+      }
+      .vega-embed .vega-actions::before {
+        left: auto;
+        right: 14px;
+        top: -16px;
+        border: 8px solid rgba(0, 0, 0, 0);
+        border-bottom-color: #d9d9d9;
+      }
+      .vega-embed .vega-actions::after {
+        left: auto;
+        right: 15px;
+        top: -14px;
+        border: 7px solid rgba(0, 0, 0, 0);
+        border-bottom-color: #fff;
+      }
+      .vega-embed .chart-wrapper.fit-x {
+        width: 100%;
+      }
+      .vega-embed .chart-wrapper.fit-y {
+        height: 100%;
+      }
+      
+      .vega-embed-wrapper {
+        max-width: 100%;
+        overflow: auto;
+        padding-right: 14px;
+      }
+      
+      @keyframes scale-in {
+        from {
+          opacity: 0;
+          transform: scale(0.6);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      </style>
 
     
 
@@ -337,6 +455,38 @@
             </p>
         </div>
 
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 10 - Interactive charts</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location26" role="graphics-document" aria-roledescription="visualization"
+                aria-label="uk unemployment" style="cursor: default;"><canvas width="510" height="535" class="marks"
+                    style="width: 340px; height: 357px;"></canvas>
+                <form class="vega-bindings"></form>
+            </div>
+            <p>
+                This chart indicates UK employment rate. The color of the graph is interactive.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="category" style="color: #54bb8e;">
+                <span>
+                    <span style="color: #54bb8e;" class="tag">Task 10 - Interactive charts</span>
+                </span>
+            </div>
+            <div class="chart vega-embed" id="Location27" role="graphics-document" aria-roledescription="visualization"
+                aria-label="japan population timeseries" style="cursor: default;"><canvas width="510" height="535" class="marks"
+                    style="width: 340px; height: 357px;"></canvas>
+                <form class="vega-bindings"></form>
+            </div>
+            <p>
+                Japanese population by prefecture over time. 
+            </p>
+        </div>
+
         
 
     </section>
@@ -430,6 +580,14 @@
         let figure_25_spec = "ukGDPtrend.json"
         vegaEmbed('#Location25', figure_25_spec)
 
+        let figure_26_spec = "Unemployment-color-interactive.json"
+        vegaEmbed('#Location26', figure_26_spec)
+
+        let figure_27_spec = "japan_population_timeseries.json"
+        vegaEmbed('#Location27', figure_27_spec)
+
+
+
 
 
         $(window).on("load", function () {
@@ -448,28 +606,7 @@
 
     </script>
 
-    <div id="vg-tooltip-element" class="vg-tooltip" style="top: 500px; left: 825px">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="key">Tide:</td>
-                    <td class="value">High</td>
-                </tr>
-                <tr>
-                    <td class="key">Height (m):</td>
-                    <td class="value">4.57</td>
-                </tr>
-                <tr>
-                    <td class="key">Date:</td>
-                    <td class="value">Jan 14, 2022</td>
-                </tr>
-                <tr>
-                    <td class="key">Time:</td>
-                    <td class="value">15:22</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    
 
 </body>
 
