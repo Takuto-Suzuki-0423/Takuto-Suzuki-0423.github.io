@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "UK unemployment",
+    "subtitle": "ONS: aged 16 and over, seasonally adjusted ",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task10/Unemployment.csv"
+  },
+  "params": [
+    {
+      "name": "colourPick",
+      "value": "pink",
+      "bind": {"input": "color", "name": "Choose colour:"}
+    }
+  ],
+  "mark": {"type": "line", "color": {"expr": "colourPick"}, "strokeWidth": 2},
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": null},
+    "y": {"field": "unemployment rate", "type": "quantitative", "title": null}
+  },
+  "config": {}
+}

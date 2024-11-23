@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Population by prefecture",
+    "anchor": "start",
+    "subtitleFontWeight": "lighter",
+    "subtitle": [
+      "From 2000 to 2015",
+      "Data: Statistics of Japan",
+      ""
+    ]
+  },
+  "width": "container",
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task10/Japan_population_timeseries.csv"
+  },
+  "params": [
+    {
+      "name": "time",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2015,
+        "step": 1,
+        "name": "Year:"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "lookup": "prefecture",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Task7/japan_.geojson",
+          "format": {
+            "type": "json",
+            "property": "features"
+          }
+        },
+        "key": "properties.name_english",
+        "fields": [
+          "type",
+          "properties",
+          "geometry"
+        ]
+      }
+    },
+    {
+      "filter": "datum.time == time"
+    }
+  ],
+  "encoding": {
+    "color": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "redyellowgreen",
+        "domainMid": 0
+      },
+      "legend": {
+        "title": "population(thousand)",
+        "labelFontWeight": "lighter",
+        "orient": "top-left",
+        "gradientOpacity": 30,
+        "direction": "vertical",
+        "gradientLength": 200
+      }
+    }
+  },
+  "projection": {
+    "type": "mercator"
+  },
+  "mark": {
+    "type": "geoshape",
+    "stroke": "black",
+    "strokeWidth": 0.3
+  },
+  "config": {}
+}
