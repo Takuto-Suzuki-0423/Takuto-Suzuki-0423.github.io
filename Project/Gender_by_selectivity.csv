@@ -1,0 +1,46 @@
+admission_type,gender,time_period,t_pupils
+non-selective schools in highly selective areas,Boys,201819,149756
+non-selective schools in highly selective areas,Boys,201920,169340
+non-selective schools in highly selective areas,Boys,202021,174876
+non-selective schools in highly selective areas,Boys,202122,182100
+non-selective schools in highly selective areas,Boys,202223,188149
+non-selective schools in highly selective areas,Girls,201819,145538
+non-selective schools in highly selective areas,Girls,201920,166067
+non-selective schools in highly selective areas,Girls,202021,171382
+non-selective schools in highly selective areas,Girls,202122,175245
+non-selective schools in highly selective areas,Girls,202223,184728
+non-selective schools in highly selective areas,Total,201819,295294
+non-selective schools in highly selective areas,Total,201920,335407
+non-selective schools in highly selective areas,Total,202021,346258
+non-selective schools in highly selective areas,Total,202122,357345
+non-selective schools in highly selective areas,Total,202223,372877
+non-selective schools in other areas,Boys,201819,2088669
+non-selective schools in other areas,Boys,201920,2415756
+non-selective schools in other areas,Boys,202021,2476703
+non-selective schools in other areas,Boys,202122,2532658
+non-selective schools in other areas,Boys,202223,2624914
+non-selective schools in other areas,Girls,201819,2038686
+non-selective schools in other areas,Girls,201920,2357652
+non-selective schools in other areas,Girls,202021,2419424
+non-selective schools in other areas,Girls,202122,2464107
+non-selective schools in other areas,Girls,202223,2544910
+non-selective schools in other areas,Total,201819,4127355
+non-selective schools in other areas,Total,201920,4773408
+non-selective schools in other areas,Total,202021,4896127
+non-selective schools in other areas,Total,202122,4996765
+non-selective schools in other areas,Total,202223,5169824
+selective schools,Boys,201819,105891
+selective schools,Boys,201920,122277
+selective schools,Boys,202021,127880
+selective schools,Boys,202122,129249
+selective schools,Boys,202223,130105
+selective schools,Girls,201819,107156
+selective schools,Girls,201920,122586
+selective schools,Girls,202021,126323
+selective schools,Girls,202122,128890
+selective schools,Girls,202223,130433
+selective schools,Total,201819,213047
+selective schools,Total,201920,244863
+selective schools,Total,202021,254203
+selective schools,Total,202122,258139
+selective schools,Total,202223,260538
