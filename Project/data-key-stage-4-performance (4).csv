@@ -1,0 +1,16 @@
+time_period,time_identifier,geographic_level,country_code,country_name,establishment_type,gender,prior_attainment,admission_type,religious_denomination,avg_att8
+202223,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in highly selective areas,Total,42.3
+202223,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in other areas,Total,46.4
+202223,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,selective schools,Total,71.8
+202122,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in highly selective areas,Total,44.3
+202122,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in other areas,Total,49
+202122,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,selective schools,Total,74.2
+202021,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in highly selective areas,Total,46.9
+202021,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in other areas,Total,51.2
+202021,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,selective schools,Total,74.7
+201920,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in highly selective areas,Total,46.6
+201920,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in other areas,Total,50.5
+201920,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,selective schools,Total,73.7
+201819,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in highly selective areas,Total,42.3
+201819,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,non-selective schools in other areas,Total,46.8
+201819,Academic year,National,E92000001,England,State-funded mainstream,Total,Total,selective schools,Total,71.6
