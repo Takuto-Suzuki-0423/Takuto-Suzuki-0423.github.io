@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
+
+<html lang="eng">
+<!-- HTML is heirarchial: tags like this define elements on the page. 
     Each tag does something different. For example:
         - The <html> tag defines the whole document.
         - The <h1> tag defines a large heading
@@ -8,46 +9,361 @@
         - Tags appear as an opening <div> and closing </div> pair
     -->
 
-<head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+<head>
+  <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
 
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="footer.css">
-    <title>DS Project</title> <!-- The title displayed in the browser tab, not on the page itself -->
+  <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
+  <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
+  <link rel="stylesheet" type="text/css" href="Project.css">
 
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <title>DS Projct</title> <!-- The title displayed in the browser tab, not on the page itself -->
 
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
+  <head>
+    <style id="vega-tooltip-style">
+      #vg-tooltip-element {
+        visibility: hidden;
+        padding: 8px;
+        position: fixed;
+        z-index: 1000;
+        font-family: sans-serif;
+        font-size: 11px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        /* The default theme is the light theme. */
+        background-color: rgba(255, 255, 255, 0.95);
+        border: 1px solid #d9d9d9;
+        color: black;
+      }
+
+      #vg-tooltip-element.visible {
+        visibility: visible;
+      }
+
+      #vg-tooltip-element h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
+
+      #vg-tooltip-element img {
+        max-width: 200px;
+        max-height: 200px;
+      }
+
+      #vg-tooltip-element table {
+        border-spacing: 0;
+      }
+
+      #vg-tooltip-element table tr {
+        border: none;
+      }
+
+      #vg-tooltip-element table tr td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+
+      #vg-tooltip-element table tr td.key {
+        color: #808080;
+        max-width: 150px;
+        text-align: right;
+        padding-right: 4px;
+      }
+
+      #vg-tooltip-element table tr td.value {
+        display: block;
+        max-width: 300px;
+        max-height: 7em;
+        text-align: left;
+      }
+
+      #vg-tooltip-element.dark-theme {
+        background-color: rgba(32, 32, 32, 0.9);
+        border: 1px solid #f5f5f5;
+        color: white;
+      }
+
+      #vg-tooltip-element.dark-theme td.key {
+        color: #bfbfbf;
+      }
     </style>
-    
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Project</title>
 
-<body> 
-    <nav class="navbar">
-        <div class="page-title"></div>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="index.html">Portfolio</a></li>
-            <li><a href="https://github.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io"><i class="fa fa-github"></i>Github</a></li>
-          </ul>
-        </div>
-      </nav>
-    
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
-        Data Science 2024
-    </h1>
-    <h3>Project</h3>
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="Project.css">
 
 
-</body>    
+    <!--call JS for responsive navbar-->
+    <script src="Project/navScript.js" defer=""></script>
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+  </head>
+
+<body>
+  <nav class="navbar">
+    <div class="page-title"></div>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="index.html">Portfolio</a></li>
+        <li><a href="https://github.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io"><i
+              class="fa fa-github"></i>Github</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="big" style="margin-bottom: 0px;">
+    Data Science Project
+  </h1>
+  <h3>UK education and its outcome</h3>
+
+  <hr class="solid">
+
+  <P>
+    Aims: In economics, several papers have researched the impacts of education on students' outcomes.
+    Their purpose is to implement better educational policies by studying education both theoretically and empirically.
+    They focus on not only students' attainment but also unequal benefits from education. 
+    This project will explain how the education system works in the UK and its effect on short-run and long-run outcomes.
+
+  </P>
+
+  <P>
+    In England, the allocation of public schools is determined by the local authority based on the preferences of parents and children.
+    However, if there is an oversubscription, the schools decide who is offered a place according to some criteria.
+    In general, schools are not allowed to select based on student ability, but there are a few local authorities where it is still allowed.
+
+
+  </P>
+
+  <p>
+    The graph below illustrates how the allocations differ between selective schools and non-selective schools.
+    For the ratio of children who are offered to their most preferable school, non-selective schools are larger than
+    selective schools.
+    However, for the second and third preferences, selective schools are larger than non-selective schools.
+    This is partly because selective schools tend to be oversubscribed.
+  </p>
+
+  <p>
+    The data I used for this graph is from GOV.UK education statistics. (<a
+      href="https://explore-education-statistics.service.gov.uk/find-statistics/secondary-and-primary-school-applications-and-offers"
+      style="color:rgb(170, 55, 6)">here</a>)
+    Although the data on the website is already clean, the challenge was to use the data which has three dimensions;
+    preference, time, and selectivity.
+    To combine the graphs and make them easily comparable, I used the "hconcut" tool to visualize.
+  </p>
+
+  <section class="container">
+    <div class="card">
+
+      <div class="chart vega-embed has-actions" id="chart1" role="graphics-document"
+        aria-roledescription="visualization" aria-label="preference offers" style="cursor: default;"><canvas width="510"
+          height="535" class="marks" style="width: 340px; height: 357px;"></canvas>
+        <form class="vega-bindings"></form>
+      </div>
+
+    </div>
+
+    <p>
+      The next graph indicates the female/male ratio for each admission type from 2018-2022.
+      In selective schools, the female-student ratio is higher than in non-selective schools on average.
+      The data I use is again from GOV.UK <a
+        href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/e48569dc-ec78-435c-a139-1879637728e5"
+        style="color:rgb(170, 55, 6)">here</a>.
+
+      Since the ratio is not provided directly from data, I used Python to aggregate the number of pupils grouped by
+      gender, admission types, and time period.
+      Then I calculated the ratio for each year and admission types.
+      The Python code I used is <a
+        href="https://colab.research.google.com/drive/1dajv8zTgTIlQSdWRL97RjSGplhP0qjFz?usp=sharing"
+        style="color:rgb(170, 55, 6)">here</a>.
+      The hardest challenge to visualize was to draw the vertical line which represents the average ratio.
+      I found mark type "rule" worked in this case.
+
+    </p>
+
+    <div class="card">
+
+      <div class="chart2 vega-embed" id="chart2" role="graphics-document" aria-roledescription="visualization"
+        aria-label="gender ratio" style="cursor: default;"><canvas width="510" height="535" class="marks"
+          style="width: 340px; height: 357px;"></canvas>
+        <form class="vega-bindings"></form>
+      </div>
+      <p>
+        Non-selective 1 indicates the non-selective schools in highly selective areas.
+        Non-selective 2 means the non-selective schools in other areas.
+      </p>
+    </div>
+
+    <p>
+      The graph below shows the average Attainment 8 scores by admission type.
+
+      This clearly shows the students in selective schools got higher scores than students in non-selective schools.
+      However, because the pupils in selective schools have a higher ability to study before they enter, the value added
+      by schools is still unclear.
+      This data is on the GOV.UK (<a
+        href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/e48569dc-ec78-435c-a139-1879637728e5"
+        style="color:rgb(170, 55, 6)">here</a>).
+
+
+    </p>
+
+
+    <div class="card">
+
+      <div class="chart vega-embed" id="chart3" role="graphics-document" aria-roledescription="visualization"
+        aria-label="attainment school type" style="cursor: default;"><canvas width="510" height="535" class="marks"
+          style="width: 340px; height: 357px;"></canvas>
+        <form class="vega-bindings"></form>
+      </div>
+
+    </div>
+
+
+    <p>
+      The next graph is a scatter plot of the average progression score and higher education progression rate by local
+      authorities with its regression line.
+      The progression score is a value-added score for each pupil. There is a clear trend that the progression rate and
+      progression score are highly correlated by local authority level.
+      The Data is from GOV.UK <a
+        href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/6d91f66c-4f5e-495c-b207-3044901e40ad"
+        style="color:rgb(170, 55, 6)">here</a>.
+      To make the scatter plots, I aggregate the progression score and progression rate using Python.
+       
+      The difficulty was to aggregate two different variables.
+      To tackle this, I first aggregate the progression score and progression rate separately, and merge them by the local authority name.
+      The Python code is
+      <a href="https://colab.research.google.com/drive/1Hu_uyFZi82X2hurQHTzdIH-y3SRLFqRB?usp=sharing"
+        style="color:rgb(170, 55, 6)">here</a>.
+
+
+
+    </p>
+
+    <div class="card">
+
+      <div class="chart vega-embed" id="chart4" role="graphics-document" aria-roledescription="visualization"
+        aria-label="progression scatter" style="cursor: default;"><canvas width="510" height="535" class="marks"
+          style="width: 340px; height: 357px;"></canvas>
+        <form class="vega-bindings"></form>
+      </div>
+
+    </div>
+
+
+
+
+    <p>
+      Also, the map below indicates the average progression score by local authorities.
+      Although there are many missing values, the local authorities in London have a higher progression score.
+      The data I used is <a
+        href="https://explore-education-statistics.service.gov.uk/data-catalogue/data-set/6d91f66c-4f5e-495c-b207-3044901e40ad"
+        style="color:rgb(170, 55, 6)">here</a>.
+    </p>
+
+
+
+    <div class="card">
+
+      <div class="chart vega-embed" id="chart5" role="graphics-document" aria-roledescription="visualization"
+        aria-label="p_score" style="cursor: default;"><canvas width="510" height="535" class="marks"
+          style="width: 340px; height: 357px;"></canvas>
+        <form class="vega-bindings"></form>
+      </div>
+
+    </div>
+
+    <p>
+      The next graph shows the wage per hour by education level. 
+      According to the graph, highly educated people tend to earn higher wages.
+      The data is <a
+      href="https://social-mobility.data.gov.uk/intermediate_outcomes/work_in_early_adulthood_(25_to_29_years)/income_returns_to_education/latest"
+      style="color:rgb(170, 55, 6)">here</a>. 
+
+    </p>
+
+    <div class="card">
+
+      <div class="chart vega-embed" id="chart6" role="graphics-document" aria-roledescription="visualization"
+        aria-label="wage_education" style="cursor: default;"><canvas width="510" height="535" class="marks"
+          style="width: 340px; height: 357px;"></canvas>
+        <form class="vega-bindings"></form>
+      </div>
+
+    </div>
+
+    <p>
+      Finally, I plotted the government expenditure on education. 
+      It shows the expenditure has decreased over the last two decades.
+      To make this graph, I used the World Bank API <a
+      href="https://api.worldbank.org/v2/country/GBR/indicator/SE.XPD.TOTL.GB.ZS?format=json"
+      style="color:rgb(170, 55, 6)">here</a>.
+      The challenge in making this graph was to find the format of the World Bank API.
+      Also, by just using the URL, the graph does not work, so I make use of the "format" tool.
+
+    </p>
+
+
+
+    <div class="card">
+
+      <div class="chart vega-embed" id="chart7" role="graphics-document" aria-roledescription="visualization"
+        aria-label="expenditure_education" style="cursor: default;"><canvas width="510" height="535" class="marks"
+          style="width: 340px; height: 357px;"></canvas>
+        <form class="vega-bindings"></form>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <p> 
+      Conclusion: In the current UK education system, pupils' characteristics such as gender are different among admission types.
+      Also, the attainment of education is heterogeneous among regions and school types.
+      The difference in the attainment will lead to the difference in higher education progression rates, and ultimately affect future income.
+      Although one of the purposes of education is to increase students' abilities, looking at the distribution of gains from education is also important.
+      Therefore, the government needs to implement educational policies to enhance students' attainment and to make the equal distribution of gains from education.
+      However, the government expenditure on education has decreased recently. It is quite difficult to judge whether the reduction is valid or not because the effect of education is often hard to measure.
+      Thus, more advanced methods are needed to correctly estimate the impacts of education on outcomes.
+      
+    </p>
+
+
+
+
+
+
+
+  </section>
+
+
+</body>
+
+<script>
+  vegaEmbed('#chart1', "offer_preference.json")
+  vegaEmbed('#chart2', "gender_ratio.json")
+  vegaEmbed('#chart3', "attainment_by_admissiontype.json")
+  vegaEmbed('#chart5', "progression_score.json")
+  vegaEmbed('#chart4', "progression_scatter.json")
+  vegaEmbed('#chart6', "wage_education.json")
+  vegaEmbed('#chart7', "government_ed_expenditure.json")
+
+
+
+
+</script>
