@@ -1,0 +1,147 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Project/Gender_ratio.csv"
+  },
+  "title": {
+    "text": "Gender ratio by admission type",
+    "subtitle": [
+      "The red line indicates the average gender ratio of the year",
+      "Source: GOV.UK"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitleColor": "black",
+    "anchor": "start",
+    "color": "#54bb8e"
+  },
+  "width": "container",
+  "height": "container",
+  "params": [
+    {
+      "name": "year",
+      "value": "2018",
+      "bind": {
+        "input": "select",
+        "options": ["2018", "2019", "2020", "2021", "2022"] 
+      }
+
+    }
+  ],
+  "view": {"stroke": "transparent"},
+  "resolve": {"axis": {"x": "independent"}},
+  "transform": [
+    {"calculate": "substring(datum.time_period, 0, 4)", "as": "Year"},
+    {
+      "calculate": "datum.admission_type === 'non-selective schools in highly selective areas' ? 'non-selective 1' : datum.admission_type",
+      "as": "admission_type"
+    },
+    {
+      "calculate": "datum.admission_type === 'non-selective schools in other areas' ? 'non-selective 2' : datum.admission_type",
+      "as": "admission_type"
+    },
+    {
+      "calculate": "datum.admission_type === 'selective schools' ? 'selective' : datum.admission_type",
+      "as": "admission_type"
+    },
+    {"filter": "datum.Year == year"},
+    {
+      "calculate": "replace(datum['Girls/Boys Ratio'], ' ', '_')",
+      "as": "value"
+    },
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "value", "order": "ascending"}]
+    },
+    {
+      "lookup": "Year",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Project/Gender_ratio_average.csv"
+        },
+        "key": "time_period",
+        "fields": ["Girls/Boys_Ratio_average"]
+      }
+    },
+    {
+      "calculate": "replace(datum['Girls/Boys_Ratio_average'], ' ', '_')",
+      "as": "average"
+    }
+  ],
+  "layer": [
+    {
+      "transform": [
+        {"calculate": "datum.value - 1", "as": "diff"},
+        {"calculate": "datum.value ? datum.count : null", "as": "order"}
+      ],
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "admission_type",
+          "type": "nominal",
+          "axis": {"ticks": false, "labelPadding": 5, "title": null}
+          
+        },
+        "x": {
+          "field": "diff",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "titlePadding": 10,
+            "ticks": false,
+            "labelPadding": 5,
+            "labelExpr": "format(datum.value + 1, '.2f')",
+            "values": [-0.05, -0.03, 0, 0.03, 0.05],
+            "orient": "top",
+            "domain": false,
+            "labelFontSize": 11,
+            "labelAlign": "center",
+            "gridColor": {
+              "expr": "datum.value == 0 ? 'black' : rgb(211,211,211,1)"
+            }
+          },
+          "scale": {"domain": [-0.05, 0.05], "nice": false}
+        }
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "red", "size": 2},
+      "transform": [
+        {"calculate": "datum.average - 1", "as": "totalaverage"},
+        {"calculate": "datum.average ? datum.count : null", "as": "order"}
+      ],
+      "encoding": {
+        "x": {
+          "field": "totalaverage",
+          "axis": {
+            "ticks": false,
+            "labelPadding": 5,
+            "labels": false,
+            "domain": false,
+            "title": null
+          },
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {"values": [{"text": "More boys ←"}]},
+      "mark": {"type": "text", "align": "left"},
+      "encoding": {
+        "text": {"field": "text"},
+        "x": {"value": 0},
+        "y": {"value": -30}
+      }
+    },
+    {
+      "data": {"values": [{"text": "→ More girls "}]},
+      "mark": {"type": "text", "align": "right"},
+      "encoding": {
+        "text": {"field": "text"},
+        "x": {"value": 200},
+        "y": {"value": -30}
+      }
+    }
+  ],
+  "config": {}
+}

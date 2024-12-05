@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": "container",
+  "data": {
+    "url": "https://raw.githubusercontent.com/martinjc/UK-GeoJSON/refs/heads/master/json/administrative/eng/lad.json",
+    "format": {"property": "features", "type": "json"}
+  },
+  "title": {
+    "text": "UK progression score by region",
+    "subtitle": ["soure:GOV.UK,2019, Gray areas are missing value"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitleColor": "black",
+    "anchor": "start",
+    "color":  "#54bb8e"
+  },
+  "projection": {"type": "mercator"},
+  "transform": [
+    {
+      "lookup": "properties.LAD13CD",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Project/progression_score_2019.csv"
+        },
+        "key": "new_la_code",
+        "fields": ["new_la_code", "all_pscore", "time_period", "la_name"]
+      }
+    }
+  ],
+  "layer": [
+    {"mark": {"type": "geoshape", "stroke": "gray", "fill": "lightgrey"}},
+    {
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {
+          "title": "Progression Score",
+          "field": "all_pscore",
+          "type": "quantitative",
+          "legend": {
+            "title": "Progression Score",
+            "labelFontWeight": "lighter",
+            "orient": "none",
+            "legendX": 30,
+            "legendY": 0,
+            "direction": "vertical",
+            "gradientLength": 200
+          }
+        },
+        "tooltip": [
+          {"field": "la_name", "title": "region"},
+          {"field": "all_pscore", "title": "progression_score"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

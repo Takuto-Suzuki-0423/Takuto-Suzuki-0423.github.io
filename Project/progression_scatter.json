@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Various US measures state by state",
+  "title": {
+    "text": "Progression rates and progression score",
+    "subtitle": [
+      "Progression rate(x), and proression score (y)",
+      " source:GOV.UK"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color":  "#54bb8e"
+  },
+  "height": "container",
+  "width": "container",
+  "transform": [{"filter": "datum.la_name!=='City of London'"}],
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Project/pscore_progressed.csv",
+    "format": {"type": "csv"}
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        
+        "color": "cornflowerblue",
+        "opacity": 0.6
+      },
+      "encoding": {
+        "x": {"field": "all_progressed", "type": "quantitative", "title": null},
+        "y": {"field": "all_pscore", "type": "quantitative", "title": null},
+        "tooltip": [
+          {"field": "la_name", "title": "name"},
+          {"field": "all_pscore", "title": "p_rate"},
+          {"field": "all_progressed", "title": "p_score"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "coral"},
+      "transform": [{"regression": "all_pscore", "on": "all_progressed"}],
+      "encoding": {
+        "x": {"field": "all_progressed", "type": "quantitative"},
+        "y": {"field": "all_pscore", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {}
+}

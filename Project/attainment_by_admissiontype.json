@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Takuto-Suzuki-0423/Takuto-Suzuki-0423.github.io/refs/heads/main/Project/attainment_by_selectivity.csv"
+  },
+  "title": {
+    "text": "Average Attainment 8 score by admission type",
+    "subtitle": ["England state-funded schools", "Source: GOV.UK"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitleColor": "black",
+    "anchor": "start",
+    "color": "#54bb8e"
+  },
+  "transform": [
+    {
+      "calculate": "datum.admission_type === 'non-selective schools in highly selective areas' ? 'non-selective: highly selective areas' : datum.admission_type",
+      "as": "admission_type"
+    },
+    {
+      "calculate": "datum.admission_type === 'non-selective schools in other areas' ? 'non-selective: other areas' : datum.admission_type",
+      "as": "admission_type"
+    },
+    {
+      "calculate": "datum.admission_type === 'selective schools' ? 'selective' : datum.admission_type",
+      "as": "admission_type"
+    }
+  ],
+  "width": "container",
+  "height": "container",
+  "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "time_period",
+      "type": "temporal",
+      "title": null,
+      "timeUnit": "binnedutcyear"
+    },
+    "y": {"field": "avg_att8", "type": "quantitative", "title": null},
+    "color": {
+      "legend": {"title": "school type", "orient": "bottom-left"},
+      "field": "admission_type",
+      "type": "nominal"
+      
+    
+    }
+  },
+  "config": {}
+}

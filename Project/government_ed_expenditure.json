@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Government Expenditure on Education (% of GDP) in the UK",
+  "data": {
+    "url": "https://api.worldbank.org/v2/country/GBR/indicator/SE.XPD.TOTL.GB.ZS?format=json",
+    "format": {"type": "json", "property": "1"}
+  },
+  "transform": [{"filter": "datum.value"}],
+  "mark": {"type": "line","color":"coral"},
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": null},
+    "y": {"field": "value", "type": "quantitative", "title": null}
+  },
+  "width": "container",
+  "height": "container",
+  "title": {
+    "text": "Government Expenditure on Education",
+    "subtitle": [" % of GDP in the UK","Source: World Bank"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "subtitleColor": "black",
+    "anchor": "start",
+    "color": "#54bb8e"
+  },
+   
+  "config": {}
+}
