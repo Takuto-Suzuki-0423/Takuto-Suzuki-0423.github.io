@@ -4,17 +4,21 @@
 /* These are comments in CSS. Comments don't do anything except explain your working to make code easier to understand. */
 
 
-body { /* We can style any HTML element by using its name - here we're styling the body */
+body {
+  /* We can style any HTML element by using its name - here we're styling the body */
   /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
- 
+
   /* we want a white page, that's centered and not too wide */
-  background-color: #f1f1ee;
- 
+  background-color: #ebe5e5;
+
 }
 
 
 /* Headings */
- h2, h4, h5, h6 {
+h2,
+h4,
+h5,
+h6 {
   color: #0c7222;
   margin-top: 24px;
   margin-bottom: 16px;
@@ -22,7 +26,8 @@ body { /* We can style any HTML element by using its name - here we're styling t
 }
 
 /* We want the headings to be a little bigger than the paragraph text */
-.big { /* This is the class we created in the HTML file, you can use it to style any element */
+.big {
+  /* This is the class we created in the HTML file, you can use it to style any element */
   font-size: 2.5em;
 }
 
@@ -41,7 +46,8 @@ p {
 }
 
 section {
-  margin-bottom: 2.5em;  /* We want a little more space between sections */
+  margin-bottom: 2.5em;
+  /* We want a little more space between sections */
 }
 
 /* Links */
@@ -54,14 +60,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
-  
+
 /* Images */
 img {
   max-width: 100%;
   height: auto;
 }
 
-h1, h3 {
+h1,
+h3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +82,7 @@ h1 {
   padding-top: 4vh;
   height: 10vh;
 }
+
 h3 {
   font-size: 1.8rem;
   font-weight: 300;
@@ -109,7 +117,7 @@ h3 {
 
 
 .vega-embed {
-  position:relative;
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
 }
@@ -130,15 +138,21 @@ h3 {
   overflow-x: scroll;
   overflow-y: hidden;
 }
-.chart#Location8{
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-.chart#Location7{
+
+.chart#Location8 {
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
+.chart#Location7 {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.chart#chart1 {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
 
 
 
@@ -224,16 +238,16 @@ h3 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
   padding: 5px;
-  
-  
+
+
 }
 
 .card2 .category .tag {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
   padding: 5px;
-  
-  
+
+
 }
 
 
@@ -244,7 +258,7 @@ h3 {
   position: relative;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1ee;
+  background-color: #ebe5e5;
   color: black;
 }
 
@@ -300,33 +314,33 @@ h3 {
 
 @media (max-width: 500px) {
   .navbar {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .toggle-button {
-      display: flex;
+    display: flex;
   }
 
   .navbar-links {
-      display: none;
-      width: 100%;
+    display: none;
+    width: 100%;
   }
 
   .navbar-links ul {
-      width: 100%;
-      flex-direction: column;
+    width: 100%;
+    flex-direction: column;
   }
 
   .navbar-links ul li {
-      text-align: center;
+    text-align: center;
   }
 
   .navbar-links ul li a {
-      padding: .5rem 1rem;
+    padding: .5rem 1rem;
   }
 
   .navbar-links.active {
-      display: flex;
+    display: flex;
   }
 }
